@@ -1,34 +1,27 @@
 \documentclass[12pt,twoside,openright]{memoir}
 
-\title{Engrams and Moonwalks}
-\author{AmethystHeart2421}
-\date{2022--08--15}
-\setstocksize{9in}{6in}
-
 \usepackage[paperwidth=6in, paperheight=9in, margin=1in, showcrop]{geometry}
 \usepackage{fancyhdr}
-\usepackage{authoraftertitle}
-\usepackage{amsmath}
-\usepackage{amssymb,amsfonts,textcomp}
-\usepackage[T1]{fontenc}
-\usepackage[english]{babel}
 \usepackage{color}
-\usepackage{array}
 \usepackage{fontspec}
-\usepackage{hhline}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{emoji}
 \usepackage{tcolorbox}
-\usepackage[usefilenames,RM={Scale=0.88},SS={Scale=0.88},SScon={Scale=0.88},TT={Scale=0.88}]{plex-otf}
 \usepackage{listofitems}
 \usepackage{fancyqr}
 
 
 \graphicspath{ {./} }
 \hypersetup{colorlinks=true, linkcolor=black, citecolor=black, filecolor=black, urlcolor=black}
-
 \tcbuselibrary{skins,breakable}
+
+
+\author{AmethystHeart2421}
+\date{15 August 2022}
+\setstocksize{9in}{6in}
+\title{\textbf{\fontspec{Quantico}Engrams }\small\textbf{\fontspec{Open Sans} and } \huge\textbf{\fontspec{Moon Dance} Moonwalks}}
+
 % SMS Colors
 \definecolor{SMSFrom}{RGB}{18, 137, 254}
 \definecolor{onSMSFrom}{RGB}{255, 255, 255}
@@ -37,23 +30,14 @@
 \definecolor{SMSTitleBack}{RGB}{246, 246, 246}
 \definecolor{SMSTitleText}{RGB}{0, 0, 0}
 \definecolor{DarkPurple}{RGB}{74,38,84}
-\definecolor{LightPurple}{RGB}{247,188,241}
+\definecolor{LightPurple}{RGB}{105,54,120}
 
-\setmainfont{Roboto} % Change this to your main font
+\setmainfont{Open Sans}
 
 % setup human readible names for sms sfunciton
 \newcommand\smsText{0}
 \newcommand\smsFrom{1}
 \newcommand\smsTo{2}
-
-\newcommand\MoonWalkerOhSix{MoonWalker06}
-\newcommand\BarkToThePark{Bark to the Park}
-\newcommand\PadfootTwelve{Padfoot12}
-\newcommand\Padfoot{Padfoot}
-\newcommand\Moony{Moony}
-\newcommand\Emma{Emmeline (Emma)}
-\newcommand\Sirius{Sirius}
-\newcommand\Marlene{Marlene}
 
 \makeatletter
 \newcommand{\tupleSwitch}[1]{
@@ -79,6 +63,27 @@
 	big~oof~FIXME!!!!!1 \par
 	\fi
 }
+\newcommand{\myrulez}{	
+	\begin{center}
+		\hspace{.5em}
+		\includegraphics[angle=60]{dogprint.pdf}
+		\hspace{.5em}
+		\includegraphics[angle=120]{dogprint.pdf}
+		\hspace{.5em}
+		\includegraphics[angle=60]{dogprint.pdf}
+		\hspace{.5em}
+		\includegraphics[angle=120]{dogprint.pdf}
+		\hspace{.5em}
+		\includegraphics[angle=60]{dogprint.pdf}
+		\hspace{.5em}
+		\includegraphics[angle=120]{dogprint.pdf}
+		\hspace{.5em}
+	\end{center}
+}
+
+\newcommand{\smsPic}[2]{
+	\hspace*{0.25\textwidth}\includegraphics[width=0.5\textwidth, alt=#2]{#1}
+}
 
 \newcommand{\smsFromBubble}[1] {
 \parbox{0.20\textwidth}{\hfill}
@@ -98,7 +103,6 @@
 	\parbox{0.2\textwidth}{\hfill}
 }
 
-
 \newcommand{\smsConversation}[2]{
 	\begin{tcolorbox}[breakable, title=#1, center title,colframe=SMSTitleBack, coltitle=SMSTitleText, colback=white, fonttitle=\bfseries]
 		\tupleSwitch{#2}
@@ -108,11 +112,11 @@
 
 \newcommand{\myQuote}[2]{
 	#1
-	\vspace{-1.5em}
+	\vspace{-1.25em}
 	\begin{flushright}
 		---#2
 	\end{flushright}
-	\vspace{1em}
+	\vspace{.75em}
 }
 
 % Outline numbering
@@ -120,12 +124,10 @@
 
 \pagestyle{fancy}
 
-
 \let\MyTitle\@title
 \let\MyAuthor\@author
 
 \fancyhf{}
-
 \fancyhead{} % clear all header fields
 \fancyhead[RO]{\textbf{\MyTitle}}
 \fancyhead[LE]{\textbf{\MyAuthor}}
@@ -141,11 +143,13 @@
 \setlength{\parskip}{0.5em}
 
 \begin{document}
-	
-\maketitle
 
 \frontmatter
-\chapter*{Dedication}
+
+\maketitle
+
+\raggedright
+\chapter*[]{}
 For my husband, James, who gave me the idea to combine my obsessions with Scientology and Wolfstar. Also for patiently listening to me ramble on about this story for months. \emoji{face-blowing-a-kiss}
 
 \chapter*{Acknowledgements}
@@ -181,12 +185,9 @@ Modern Muggle AU taking place in the imaginary Southern California city of Hogsm
 The Black family are devout Scientologists, and Sirius has been disconnected from them for years. His religious trauma resurfaces when he finds a surprise from his brother, Regulus left on his front step.
 
 Remus is a grad student studying to be a school psychologist. His mother is ill and his family is struggling financially. He decides to sign up to walk dogs at night for extra income. His first client is a male model living in the upscale neighborhood of Godric's Hollow. And neither of them can deny their attraction.
-\pagebreak
-\tableofcontents
-
 \mainmatter
 \raggedbottomsection
-\chapter{Introductions}
+\chapter*{Chapter 1}
 
 \textbf{Remus} 
 
@@ -212,7 +213,7 @@ As Remus was leaving the hospital, he was stopped by the front desk clerk. ``Mr.
 
 ``Er, yeah, um, he's probably been busy. I'll talk to him about it. Thanks, Pomona.'' And dread dropped into his stomach like a stone. 
 
----
+\myrulez
 
 ``My mom asked about you yesterday. She wants to teach you how to make all of my favorite meals so you can fatten me up.''
 
@@ -226,7 +227,7 @@ He looked up at her and smiled sadly. ``She's okay. I mean, not well enough to l
 
 ``Well, I guess you leave me no choice.'' He beamed gratefully at his friend as he took another big bite of his sandwich. 
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -254,7 +255,7 @@ Mary did a little dance of joy, and hugged him from behind, talking to him in th
 
 ``Can't wait.'' 
 
----
+\myrulez
 
 The pub was indeed crowded, and noisy, but Mary was right; it was great to be out with the old gang. Along with Mary, Marlene, and her girlfriend, Dorcas, they were joined by Gideon and Fabian Prewett, models and actors who had been much more successful than Sirius in building public recognition. He was secretly grateful, as their presence meant they chose a large table nestled in the corner of the pub to try to minimize exposure. And most of the attention they did get from strangers was directed at the red-headed twins. 
 
@@ -279,7 +280,7 @@ Mary nudged Sirius and whispered ``That guy over there has been checking you out
 
 His name was Gilderoy, which Sirius thought was a ridiculous name, but he was very good looking. So Sirius turned on the charm, smiling and making smalltalk. Which, with Gilderoy, was mostly listening to him talk about himself and all of his amazing accomplishments. When he did start asking questions, it seemed unnatural and forced, and there was something about the words he used, the way he asked about Sirius's family and about his Instagram following, that made anxiety start to crawl up Sirius's spine. He looked over at James, and that was all he needed to do. James had sent a message to their driver, made an excuse to their friends, quickly gave hugs, and pulled Sirius out the door, all within minutes.
 
-\chapter{Surprise}
+\chapter*{Chapter 2}
 
 \textbf{Remus} 
 
@@ -314,7 +315,7 @@ After graduation, Lily got a new apartment close to her new job at Hogwarts, and
 
 ``I don't know. But I don't think just blocking him again will do much good. He'll just use a different number. I really don't know what else to do. Maybe if I change my number again, he'll finally give up?'' she said this hopefully, but he could hear the doubt and fear in her voice. Remus reached across the table to hold her hand in sympathy. He was at a loss for how to help her. And then Flo was back to take their order. They both ordered waffles with eggs and bacon, and tried, for the moment, to drown their problems in maple syrup.
 
----
+\myrulez
 
 Before leaving St.\ Mungos, Remus was stopped by the front desk clerk, Pomona, again. She filled him in on the situation, since his father had not yet resolved it. The insurance had denied the claim for one of the medications that his mother was on, leaving them with a rather large bill. He assured her that he would take care of it, but he would need time. He really didn't want to tell his father about this new debt being added to the already insurmountable pile. Remus decided right then that he would find a way to help pay off the debt. But it wasn't going to be easy. Between grad school courses, field experience hours, and visits to his mother, he really didn't have a lot of time for a job.
 
@@ -334,7 +335,7 @@ Just then he crashed headlong into another man coming around the corner. The man
 
 Lily gasped and grabbed Remus's arm, an open mouthed grin spread across her face. She was thinking exactly what he was thinking. Dog walking, of course! That's something people get paid to do, and it's part time, and dog walkers can probably make their own schedules. It was perfect. ``I haven't, but I would love to hear more.'' 
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -373,7 +374,7 @@ Panic flooded through Sirius as he set down the dog and ran down the walkway, lo
 
 He slowly trudged back up the walk to where Barty was choking himself in an attempt to escape the leash. Sirius sighed, resigned, picked up the dog and brought him into the house.
 
-\chapter{Walking the Dog}
+\chapter*{Chapter 3}
 
 \textbf{Remus} 
 
@@ -383,7 +384,7 @@ Next, was setting up a profile. You could choose a profile name and add a short 
 
 So that was that. Now he just needed to wait for his background check to be approved and he could start booking jobs. It felt good to be doing something, anything, that could relieve the pressure on his family, and the knot of dread in his stomach seemed to loosen just a little.
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -410,7 +411,7 @@ This time had been really rough though. Regulus had joined the Sea Org. He had h
 
 ``Okay, okay. I'm moving.'' Sirius dragged himself out of bed. ``But I want real ice cream, not your stupid protein powder crap!'' he called back as he entered the bathroom and James laughed.
 
----
+\myrulez
 
 ``He probably just needs to get some of his energy out. I can take him out in the mornings for a jog before I go to the office.'' James offered as he handed Sirius his smoothie. James had inherited a majority share of his parent's company when they died, and made enough passive income that he really didn't need to work at all. But he had gotten a degree in Corporate Law and actually enjoyed his work. Still, Sirius thought, it had to be weird working in an office with people who knew you were technically the owner of the company. James was so friendly and carefree though, it didn't seem to affect him at all. ``You're going to have to take him out at night though, wear him out enough that he doesn't tear the place up while we're sleeping.''
 
@@ -430,70 +431,70 @@ Sirius was scrolling through the list of dog walkers in the area, grimacing as h
 Sirius winked at his friend.. ``Sure, sure. I want this one!'' and he tapped the button to send a message.
 
 
-{\centering\includegraphics[width=\textwidth,height=\textheight]{profile}}
+\includegraphics[width=\textwidth,height=\textheight]{profile}
 	
 
-\chapter{Text Me}
+\chapter*{Chapter 4}
 \textbf{4:30PM}\vspace{-3em}
-\smsConversation{\BarkToThePark}{
-	\smsFrom, {\BarkToThePark}, {You have a message from Bark to the Park user, \PadfootTwelve.};
-	\smsFrom, {\BarkToThePark}, {Type Yes to accept the message};
-	\smsTo, {\MoonWalkerOhSix}, {Yes}
+\smsConversation{Bark to the Park}{
+	\smsFrom, {Bark to the Park}, {You have a message from Bark to the Park user, Padfoot12.};
+	\smsFrom, {Bark to the Park}, {Type Yes to accept the message};
+	\smsTo, {MoonWalker06}, {Yes}
 }
 
-\smsConversation{\PadfootTwelve}{
-	\smsFrom, {\PadfootTwelve}, {Hello, \MoonWalkerOhSix. I would like to request your services for an obnoxious miniature pinscher that needs walking. Does 8:00 work for you? Which days are you available?};
-	\smsTo, {\MoonWalkerOhSix}, {Hi, that's great, I'm sure they are nothing I can't handle. \emoji{winking-face} Right now I am available every evening except for Wednesdays and Fridays.};
-	\smsFrom, {\PadfootTwelve}, {Okay cool, let's book an hour on all of those nights. Do you know where Godric's Hollow is?};
-	\smsTo, {\MoonWalkerOhSix}, {Yup, no problem! So, five nights a week? The app has my rates, just want to make sure that is okay with you.};
-	\smsFrom, {\PadfootTwelve}, {Of course, but I do have one very important question before we proceed.};
-	\smsFrom, {\PadfootTwelve}, {Can you really moonwalk?};
-	\smsTo, {\MoonWalkerOhSix}, {Oh, haha, the username. I just thought it was a clever way to indicate I am only available for night time walks.};
-	\smsFrom, {\PadfootTwelve}, {That doesn't really answer the question, Moonboy \emoji{winking-face-with-tongue}};
-	\smsTo, {\MoonWalkerOhSix}, {Well, yes, I can moonwalk. I mean, it's not that hard. Can't everyone?};
-	\smsTo, {\MoonWalkerOhSix}, {I look forward to meeting Padfoot (I assume that's your dog's name?) Did you want to start tonight?};
-	\smsFrom, {\PadfootTwelve}, {Ah, haha no the dog is called Barty. I'm Padfoot.};
-	\smsFrom, {\PadfootTwelve}, {I mean yes. About starting tonight. Barty looks forward to meeting you, too. \emoji{smiling-face-with-smiling-eyes}};
-	\smsTo, {\MoonWalkerOhSix}, {Barty, that's an interesting name for a dog. Short for Bartholemew?};
-	\smsTo, {\MoonWalkerOhSix}, {Padfoot is an interesting name for a human.};
-	\smsFrom, {\PadfootTwelve}, {It's short for Bartemius actually. It's a stupid name for a dog. My weird brother named him.};
-	\smsFrom, {\PadfootTwelve}, {Padfoot is a perfectly normal name for a human, Moony. (*\string^{\fontspec{Times New Roman}\symbol{"203F}}\string^*)}
+\smsConversation{Padfoot12}{
+	\smsFrom, {Padfoot12}, {Hello, MoonWalker06. I would like to request your services for an obnoxious miniature pinscher that needs walking. Does 8:00 work for you? Which days are you available?};
+	\smsTo, {MoonWalker06}, {Hi, that's great, I'm sure they are nothing I can't handle. \emoji{winking-face} Right now I am available every evening except for Wednesdays and Fridays.};
+	\smsFrom, {Padfoot12}, {Okay cool, let's book an hour on all of those nights. Do you know where Godric's Hollow is?};
+	\smsTo, {MoonWalker06}, {Yup, no problem! So, five nights a week? The app has my rates, just want to make sure that is okay with you.};
+	\smsFrom, {Padfoot12}, {Of course, but I do have one very important question before we proceed.};
+	\smsFrom, {Padfoot12}, {Can you really moonwalk?};
+	\smsTo, {MoonWalker06}, {Oh, haha, the username. I just thought it was a clever way to indicate I am only available for night time walks.};
+	\smsFrom, {Padfoot12}, {That doesn't really answer the question, Moonboy \emoji{winking-face-with-tongue}};
+	\smsTo, {MoonWalker06}, {Well, yes, I can moonwalk. I mean, it's not that hard. Can't everyone?};
+	\smsTo, {MoonWalker06}, {I look forward to meeting Padfoot (I assume that's your dog's name?) Did you want to start tonight?};
+	\smsFrom, {Padfoot12}, {Ah, haha no the dog is called Barty. I'm Padfoot.};
+	\smsFrom, {Padfoot12}, {I mean yes. About starting tonight. Barty looks forward to meeting you, too. \emoji{smiling-face-with-smiling-eyes}};
+	\smsTo, {MoonWalker06}, {Barty, that's an interesting name for a dog. Short for Bartholemew?};
+	\smsTo, {MoonWalker06}, {Padfoot is an interesting name for a human.};
+	\smsFrom, {Padfoot12}, {It's short for Bartemius actually. It's a stupid name for a dog. My weird brother named him.};
+	\smsFrom, {Padfoot12}, {Padfoot is a perfectly normal name for a human, Moony. (*\string^{\fontspec{Times New Roman}\symbol{"203F}}\string^*)}
 }
 \textbf{8:00PM}\vspace{-3em}
-\smsConversation{\Padfoot}{
-	\smsTo, {\Moony}, {Hi, I am at the gate at Godric's Hollow and I realize now I should have asked for more information. There is no button here labeled ``Padfoot'' or ``Bartemius''};
-	\smsFrom, {\Padfoot}, {Oh, shit, right. Sorry, Moony --- Just give me a minute. I'll send someone out with him.};
-	\smsTo, {\Moony}, {No problem. So, I guess my name is Moony now?};
-	\smsTo, {\Moony}, {Okay, I have Barty};
-	\smsTo, {\Moony}, {I met your night guard. Nice guy. Did you know he has a pet lynx?? I didn't even realize that was legal.};
-	\smsTo, {\Moony}, {\centering\includegraphics[width=\textwidth]{taylor-heery-tOsfvWC_fFo-unsplash (1)}};
-	\smsTo, {\Moony}, {As much as I like my new name, you are entitled to know my actual name now that I have your dog in my possession and everything. If you are interested.}
+\smsConversation{Padfoot}{
+	\smsTo, {Moony}, {Hi, I am at the gate at Godric's Hollow and I realize now I should have asked for more information. There is no button here labeled ``Padfoot'' or ``Bartemius''};
+	\smsFrom, {Padfoot}, {Oh, shit, right. Sorry, Moony --- Just give me a minute. I'll send someone out with him.};
+	\smsTo, {Moony}, {No problem. So, I guess my name is Moony now?};
+	\smsTo, {Moony}, {Okay, I have Barty};
+	\smsTo, {Moony}, {I met your night guard. Nice guy. Did you know he has a pet lynx?? I didn't even realize that was legal.};
+	\smsTo, {Moony}, {\smsPic{taylor-heery-tOsfvWC\_fFo-unsplash (1)}{}};
+	\smsTo, {Moony}, {As much as I like my new name, you are entitled to know my actual name now that I have your dog in my possession and everything. If you are interested.}
 }
 \textbf{8:10PM}\vspace{-3em}
-\smsConversation{\Padfoot}{
-	\smsFrom, {\Padfoot}, {I would love to know your name, Moony.};
-	\smsFrom, {\Padfoot}, {I also want to know where you got the socks. Those are amazing.};
-	\smsFrom, {\Padfoot}, {And he's not really my dog. I'm just looking after him for a while. With your help, of course. \emoji{winking-face}};
-	\smsTo, {\Moony}, {I'm not sure where I got them. I just pick up interesting socks when I see them. I'm not going to do my moon-walking in boring socks, am I? I mean, that would be weird. \emoji{winking-face-with-tongue}};
-	\smsTo, {\Moony}, {Remus, by the way. My name is Remus.};
-	\smsFrom, {\Padfoot}, {I admire your dedication to originality, Remus.};
-	\smsFrom, {\Padfoot}, {BTW, I noticed that the app has a feature that can notify owners of every time their dog takes a shit or piss. I expect to be notified of all of Barty's bodily excretions.}	
+\smsConversation{Padfoot}{
+	\smsFrom, {Padfoot}, {I would love to know your name, Moony.};
+	\smsFrom, {Padfoot}, {I also want to know where you got the socks. Those are amazing.};
+	\smsFrom, {Padfoot}, {And he's not really my dog. I'm just looking after him for a while. With your help, of course. \emoji{winking-face}};
+	\smsTo, {Moony}, {I'm not sure where I got them. I just pick up interesting socks when I see them. I'm not going to do my moon-walking in boring socks, am I? I mean, that would be weird. \emoji{winking-face-with-tongue}};
+	\smsTo, {Moony}, {Remus, by the way. My name is Remus.};
+	\smsFrom, {Padfoot}, {I admire your dedication to originality, Remus.};
+	\smsFrom, {Padfoot}, {BTW, I noticed that the app has a feature that can notify owners of every time their dog takes a shit or piss. I expect to be notified of all of Barty's bodily excretions.}	
 }
 
-{\centering\includegraphics[width=\textwidth]{iPhone 13 Pro Max - 3}\vspace{3em}}
+\includegraphics[width=\textwidth]{iPhone 13 Pro Max - 3}\vspace{3em}
 
 \textbf{8:50PM}\vspace{-3em}
-\smsConversation{\Padfoot}{
-	\smsFrom, {\Padfoot}, {That's a lot of bodily excretions.};
-	\smsTo, {\Moony}, {It's dark out. It's hard to tell if anything is actually coming out, so I figured I'd just let you know every time he lifts his leg by a bush or a rock or a mailbox, etc, etc. It could be important information for a dedicated pet owner such as yourself.};
-	\smsFrom, {\Padfoot}, {Good call. Thanks, Moony.};
-	\smsTo, {\Moony}, {Just doing my duty, Padfoot.};
-	\smsFrom, {\Padfoot}, {If you are expecting a ``doody'' joke, then you can just forget it. I am too mature for that, Moony.};
-	\smsFrom, {\Padfoot}, {Thank you for your excellent work tonight. Barty is as happy and relaxed as I've ever seen him. He looks forward to seeing you tomorrow night.};
-	\smsTo, {\Moony}, {Barty was a pleasure to walk with, Padfoot. You can tell him I look forward to seeing him, too. Good night.}
+\smsConversation{Padfoot}{
+	\smsFrom, {Padfoot}, {That's a lot of bodily excretions.};
+	\smsTo, {Moony}, {It's dark out. It's hard to tell if anything is actually coming out, so I figured I'd just let you know every time he lifts his leg by a bush or a rock or a mailbox, etc, etc. It could be important information for a dedicated pet owner such as yourself.};
+	\smsFrom, {Padfoot}, {Good call. Thanks, Moony.};
+	\smsTo, {Moony}, {Just doing my duty, Padfoot.};
+	\smsFrom, {Padfoot}, {If you are expecting a ``doody'' joke, then you can just forget it. I am too mature for that, Moony.};
+	\smsFrom, {Padfoot}, {Thank you for your excellent work tonight. Barty is as happy and relaxed as I've ever seen him. He looks forward to seeing you tomorrow night.};
+	\smsTo, {Moony}, {Barty was a pleasure to walk with, Padfoot. You can tell him I look forward to seeing him, too. Good night.}
 }
 
-\chapter{Homo sapien}
+\chapter*{Chapter 5}
 
 \textbf{Remus}
 
@@ -512,7 +513,7 @@ Sirius winked at his friend.. ``Sure, sure. I want this one!'' and he tapped the
 
 \bigskip
 
-{\centering\includegraphics[width=\textwidth]{Review RegularFont}}
+{\includegraphics[width=\textwidth]{Review RegularFont}}
  
 
 \textit{Review text: MoonWalker06 is a miracle worker! Before he came into our lives, poor Barty was despondent and angry, taking out his frustration on any piece of furniture he could get his fangs on. He barked and howled all night long cooped up in a measly 12 bedroom mansion with only Persian rugs to piss on. But now all that has changed. One evening of frolicking beneath the stars and howling at the moon with MoonWalker06, and he is a new dog. He was able to piss himself dry on bushes, and rocks, and mailboxes as nature intended and sleep peacefully, dreaming of their next adventure. Thanks, Moony, you are my hero! }
@@ -521,7 +522,7 @@ Sirius winked at his friend.. ``Sure, sure. I want this one!'' and he tapped the
 
 ``Oh yeah, it's a good review. He's also uploaded a profile picture. Lily, you have to see this.'' He passed the phone back to her.
 
-{\centering\includegraphics[width=\textwidth]{photo overlay}}
+{\includegraphics[width=\textwidth]{photo overlay}}
 
 ``Oh Remus, he's gorgeous! And that review! He is definitely flirting with you.'' She was looking at the picture carefully, suddenly looking thoughtful. ``I'm pretty sure I've seen him before. Wait a minute!'' She set down the phone and started rustling around in her messenger bag, pulling out a magazine and flipping through the pages. ``Ah ha, isn't this him?''
 
@@ -533,24 +534,24 @@ She showed Remus a full page ad for Sleakeazy's shampoo ``for men'{}'. Featuring
 
 Remus just shook his head and tutted, ``No, no, he's a client, Lily. Best to keep things professional. I really should send him a message to thank him for the review though.'' He grinned, and Lily snickered as he started typing out a message.
 
-\smsConversation{\Padfoot}{
-	\smsTo, {\Moony}, {Wow, Padfoot, I don't know what to say. Thank you for the glowing review. I'm already getting more jobs lined up.};
-	\smsFrom, {\Padfoot}, {You deserve it, Moony. Barty was raving about you.};
-	\smsTo, {\Moony}, {Barty is actually a really well behaved dog. He's definitely been trained. You said he isn't yours?};
-	\smsFrom, {\Padfoot}, {No, he's my brother's. I'm not really a dog person. At least not small dogs. I prefer them big, fluffy, and with lots of drool. Honestly, I think I was just traumatized as a child by a horrible hairless chihuahua of my mother's.};
-	\smsTo, {\Moony}, {LOL Okay, it all makes sense now. I love all sorts of dogs, but even I find hairless chihuahuas disturbing. \emoji{grimacing-face}};
-	\smsFrom, {\Padfoot}, {He was a creepy little gremlin named Kreacher. He hated me, growled and snapped at me whenever I came near. I have no idea why. I'm obviously delightful! He loved my mother and my brother though, would follow them around and act all innocent for them. Little bitch.};
-	\smsFrom, {\Padfoot}, {I imagine Kreacher has ``crossed the rainbow bridge'' by now. Mother probably had him stuffed and mounted on the mantelpiece, knowing her. *shudders*.};
-	\smsTo, {\Moony}, {\emoji{face-screaming-in-fear} Thanks for the mental image to haunt my nightmares, Padfoot.};
-	\smsTo, {\Moony}, {Got to go, duty calls.};
-	\smsFrom, {\Padfoot}, {\emoji{pile-of-poo} Over the next week, messages from Padfoot were few and far between. Remus started to think maybe he had imagined the connection he felt in their easy banter of the first couple of interactions. Still, he couldn't help the queasy nervous excitement he felt when he went to Godric's Hollow each night, hoping that Mr.\ Black himself would come out to greet him with Barty. It was silly, but he found himself taking more time grooming himself, even putting on cologne, and choosing his most whimsical socks to wear. He imagined Padfoot would tease him about them if he saw them. It was a pathetic little fantasy, he realized. And every night, he felt the sting of disappointment when it was Shackelbolt who greeted him at the gate, with Barty leashed up and ready for his walk.}
+\smsConversation{Padfoot}{
+	\smsTo, {Moony}, {Wow, Padfoot, I don't know what to say. Thank you for the glowing review. I'm already getting more jobs lined up.};
+	\smsFrom, {Padfoot}, {You deserve it, Moony. Barty was raving about you.};
+	\smsTo, {Moony}, {Barty is actually a really well behaved dog. He's definitely been trained. You said he isn't yours?};
+	\smsFrom, {Padfoot}, {No, he's my brother's. I'm not really a dog person. At least not small dogs. I prefer them big, fluffy, and with lots of drool. Honestly, I think I was just traumatized as a child by a horrible hairless chihuahua of my mother's.};
+	\smsTo, {Moony}, {LOL Okay, it all makes sense now. I love all sorts of dogs, but even I find hairless chihuahuas disturbing. \emoji{grimacing-face}};
+	\smsFrom, {Padfoot}, {He was a creepy little gremlin named Kreacher. He hated me, growled and snapped at me whenever I came near. I have no idea why. I'm obviously delightful! He loved my mother and my brother though, would follow them around and act all innocent for them. Little bitch.};
+	\smsFrom, {Padfoot}, {I imagine Kreacher has ``crossed the rainbow bridge'' by now. Mother probably had him stuffed and mounted on the mantelpiece, knowing her. *shudders*.};
+	\smsTo, {Moony}, {\emoji{face-screaming-in-fear} Thanks for the mental image to haunt my nightmares, Padfoot.};
+	\smsTo, {Moony}, {Got to go, duty calls.};
+	\smsFrom, {Padfoot}, {\emoji{pile-of-poo} Over the next week, messages from Padfoot were few and far between. Remus started to think maybe he had imagined the connection he felt in their easy banter of the first couple of interactions. Still, he couldn't help the queasy nervous excitement he felt when he went to Godric's Hollow each night, hoping that Mr.\ Black himself would come out to greet him with Barty. It was silly, but he found himself taking more time grooming himself, even putting on cologne, and choosing his most whimsical socks to wear. He imagined Padfoot would tease him about them if he saw them. It was a pathetic little fantasy, he realized. And every night, he felt the sting of disappointment when it was Shackelbolt who greeted him at the gate, with Barty leashed up and ready for his walk.}
 }
 
 He would try to think of clever or witty things to say to start the conversation again, but usually he chickened out. One time, he even used the app's defecation tracking feature to outline a giant poop emoji over the map of the park. Padfoot had reacted to that with a string of emojis and compliments which made Remus feel ridiculously giddy for the rest of the night. He found himself re-reading the conversations during boring lectures and bus commutes.
 
 Get a grip on yourself! Remus groaned, sinking into his desk as he tried to will himself to focus on his text book. This was ridiculous. He had a crush on a fucking male model, who lived in a mansion, and whom he had never actually met. Even if they did meet in person, there was close to zero chance that Padfoot would be interested in him. He couldn't let this distract him from his studies. He put his phone away and returned to his notes.
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -562,19 +563,19 @@ He reminded himself of all of these things over and over as he showered and scru
 
 Marlene whooped, ``Yes, Sirius, finally! It's `The Hog's Head'.'' He made a derisive sound at the name of the bar. ``I know it sounds gross, but it's a fun place. The owner's a little weird but he's not stingy with the liquor in the mixed drinks! I'll send you the address.''
 
----
+\myrulez
 
-\smsConversation{\Moony}{
-	\smsFrom, {\Padfoot}, {\emoji{grinning-squinting-face}\emoji{grinning-squinting-face}\emoji{grinning-squinting-face}\emoji{rolling-on-the-floor-laughing}\emoji{rolling-on-the-floor-laughing}\emoji{beaming-face-with-smiling-eyes}\emoji{beaming-face-with-smiling-eyes}\emoji{face-screaming-in-fear}\emoji{face-screaming-in-fear}\emoji{yawning-face}\emoji{zipper-mouth-face}\emoji{anguished-face} \emoji{face-with-monocle}\emoji{pile-of-poo}\emoji{pile-of-poo}\emoji{pile-of-poo}\emoji{winking-face-with-tongue}};
-	\smsFrom, {\Padfoot}, {OMG MOONY YOU MAD GENIUS};	
-	\smsTo, {\Moony}, {I have no idea what you are referring to, Padfoot.};
-	\smsFrom, {\Padfoot}, {\centering\includegraphics[width=\textwidth]{poopmap}};
-	\smsTo, {\Moony}, {Oh right, yeah I meant to ask… What have you been feeding this dog??};
-	\smsFrom, {\Padfoot}, {I told Prongs vegan pet food was a bad idea! He's clearly crying out for help.};
-	\smsFrom, {\Padfoot}, {I'm so sorry you have had to deal with all this shit, Moony. You are an angel\emoji{baby-angel}};
-	\smsTo, {\Moony}, {I am going through poop bags at an alarming rate. I assume I can just submit an expense report for reimbursement? \emoji{money-with-wings}};
-	\smsFrom, {\Padfoot}, {\centering\includegraphics[width=\textwidth]{Screenshot_20220615-103936}};
-	\smsFrom, {\Padfoot}, {Don't you even worry about that, I'll make sure you are fully stocked.}
+\smsConversation{Moony}{
+	\smsFrom, {Padfoot}, {\emoji{grinning-squinting-face}\emoji{grinning-squinting-face}\emoji{grinning-squinting-face}\emoji{rolling-on-the-floor-laughing}\emoji{rolling-on-the-floor-laughing}\emoji{beaming-face-with-smiling-eyes}\emoji{beaming-face-with-smiling-eyes}\emoji{face-screaming-in-fear}\emoji{face-screaming-in-fear}\emoji{yawning-face}\emoji{zipper-mouth-face}\emoji{anguished-face} \emoji{face-with-monocle}\emoji{pile-of-poo}\emoji{pile-of-poo}\emoji{pile-of-poo}\emoji{winking-face-with-tongue}};
+	\smsFrom, {Padfoot}, {OMG MOONY YOU MAD GENIUS};	
+	\smsTo, {Moony}, {I have no idea what you are referring to, Padfoot.};
+	\smsFrom, {Padfoot}, {\smsPic{poopmap}{}};
+	\smsTo, {Moony}, {Oh right, yeah I meant to ask… What have you been feeding this dog??};
+	\smsFrom, {Padfoot}, {I told Prongs vegan pet food was a bad idea! He's clearly crying out for help.};
+	\smsFrom, {Padfoot}, {I'm so sorry you have had to deal with all this shit, Moony. You are an angel\emoji{baby-angel}};
+	\smsTo, {Moony}, {I am going through poop bags at an alarming rate. I assume I can just submit an expense report for reimbursement? \emoji{money-with-wings}};
+	\smsFrom, {Padfoot}, {\smsPic{Screenshot\_20220615-103936}{}};
+	\smsFrom, {Padfoot}, {Don't you even worry about that, I'll make sure you are fully stocked.}
 }
 
 ``Hey, you! Yoohoo, Black. Did you beg us to come out tonight just so you could stare at your phone?'' Marlene gave him a small shove and leaned over the bar, waiving the bartender over to refill her drink. 
@@ -599,7 +600,7 @@ Sirius stared at his beer for a while before answering. ``I don't know. I will. 
 
 Marlene leaned over and wrapped an arm around him, laying her head on his shoulder. ``Oh, sweetie. That's okay, you'll get there. You just take your time.'' And he felt his body relax, wiping away tears that he hadn't even noticed he was holding back.
 
-\chapter{A Family Emergency}
+\chapter*{Chapter 6}
 
 \textbf{Sirius} 
 
@@ -609,39 +610,39 @@ He stretched, feeling his leg bump into a warm weight snuggled up against him. H
 
 He took some Advil and a long shower before settling himself at the kitchen table with a large mug of coffee and a container of leftover chinese takeout. He unlocked his phone to scroll through his social media alerts while the caffeine and greasy food started to work their magic on his hangover. His phone dinged with the familiar sound indicating a text message, and his heart gave a little jolt when he saw that it was from Moony.
 
-\smsConversation{\Moony}{
-\smsTo, {\Moony}, {Padfoot, I'm so sorry, but I have to cancel my walk with Barty tonight. Something came up. I'm really sorry.};
-\smsFrom, {\Padfoot}, {You don't need to apologize. Do what you need to do. I hope it's nothing bad?}
+\smsConversation{Moony}{
+\smsTo, {Moony}, {Padfoot, I'm so sorry, but I have to cancel my walk with Barty tonight. Something came up. I'm really sorry.};
+\smsFrom, {Padfoot}, {You don't need to apologize. Do what you need to do. I hope it's nothing bad?}
 }
 It took a while for Moony to respond and Sirius quickly regretted the question. What right did he have to ask about why he had to cancel? It wasn't like they were really friends. They barely knew each other, for god's sake. It was none of his business. He was thinking about sending an apology when his phone dinged again. 
 
-\smsConversation{\Moony}{
-\smsTo, {\Moony}, {Well, it isn't good.};
-\smsTo, {\Moony}, {It's my mom. She isn't well. Hasn't been for a long time, but it's taken a turn for the worse and I just really need to be there with them.};
-\smsFrom, {\Padfoot}, {Of course. I'm so sorry to hear that. I know what that's like. Go and be with your parents, Moony. I wish there was something I could do to help.};
-\smsTo, {\Moony}, {Well, I have a 40 minute bus ride to imagine every horrible outcome. I could use a distraction… Have any funny stories?};
-\smsFrom, {\Padfoot}, {Yeah, okay, funny stories, I can do that! Just give me a minute.};
-\smsFrom, {\Padfoot}, {So, when I was a teenager, my parents sent me to a boarding school in L.A. A ``performing arts'' school. A real fancy one, where the celebrities send their kids.};
-\smsFrom, {\Padfoot}, {My best friend really wasn't interested in performing arts at all. I think his parents just sent him there because some of their friends told them it was a good school. But he and I were easily bored and usually looking for ways to cause trouble.};
-\smsFrom, {\Padfoot}, {We had this horrible class on Etiquette. Our teacher was a real piece of work. I swear she actually hated teenagers with a passion. She would dole out punishments for the slightest thing. If a girl in the class would giggle, or if a boy showed up with his shirt untucked, she would tut about how ``inappropriate'' it was and assign detention. Oh and she had this high pitched voice and spoke in a fake posh british accent, it made my skin crawl.};
-\smsFrom, {\Padfoot}, {She would wear these big pink bows in her hair, and I swear to god Moony, she looked like a toad. I'm not being cruel, facts are just facts.}; 
-\smsFrom, {\Padfoot}, {One day we were going to have a lesson on table manners, so they had set up a table like some English tea party. They had put out trays of sandwiches and tea cakes. You know the serving trays with the silver covers over them like they have at hotels.};
-\smsFrom, {\Padfoot}, {It had been rainy and muddy out, so my friends James and Peter and I brought a shoebox outside and started digging up worms and filling the box with them.};
-\smsTo, {\Moony}, {Oh I think I see where this is going \emoji{frog}\emoji{worm}};
-\smsFrom, {\Padfoot}, {Shh \emoji{shushing-face} patience moony, I'm telling a story here};
-\smsFrom, {\Padfoot}, {We snuck into the classroom early and started putting handfuls of worms under the serving lids. We must have miscalculated how much time we had, because the bell rang and people started coming into the classroom. So, we jumped into our seats and started frantically wiping our hands on the table cloth under the table. That's when I noticed the panicked look on Peter's face.};
-\smsFrom, {\Padfoot}, {Well, Umbridge (that's toad face) noticed his squirming too, and was joyfully assigning him detention when she opened the lid of one of the serving trays. She started shrieking, and other kids were lifting their serving lids and more girls started shrieking, and before you knew it, the classroom was filled with glorious pandemonium.};
-\smsFrom, {\Padfoot}, {Prongs (that's James) and I were literally rolling on the floor laughing. Especially when Pete finally stood up and we saw why he was squirming. He had sat directly on the box of worms. When he got up, his ass was covered in squished and squirmy worms and he was mortified!};
-\smsFrom, {\Padfoot}, {And that's how Peter got his nickname, Wormtail. He would never live that one down.};
-\smsTo, {\Moony}, {\emoji{face-with-tears-of-joy} Brilliant. I'm sure you all learned your lesson in detention?};
-\smsFrom, {\Padfoot}, {Fat chance. We did the same thing a week later, but even better, we used actual toads. Harder to procure, but worth it for the payoff.};
-\smsTo, {\Moony}, {\emoji{rolling-on-the-floor-laughing}\emoji{rolling-on-the-floor-laughing} That's amazing. You were naughty, weren't you? So if that's how Wormtail got his nickname, what about Prongs?};
-\smsFrom, {\Padfoot}, {Ah, well it's not as funny of a story, but it's from the same class. We had to learn to tell forks apart by the number of tines. That was the word we used, but James kept using the word ``prongs'', like ``Which one has only 3 prongs?'' And I would laugh at him and tell him ``They aren't ‘prongs', idiot, their ‘tines''' and he would tell me
+\smsConversation{Moony}{
+\smsTo, {Moony}, {Well, it isn't good.};
+\smsTo, {Moony}, {It's my mom. She isn't well. Hasn't been for a long time, but it's taken a turn for the worse and I just really need to be there with them.};
+\smsFrom, {Padfoot}, {Of course. I'm so sorry to hear that. I know what that's like. Go and be with your parents, Moony. I wish there was something I could do to help.};
+\smsTo, {Moony}, {Well, I have a 40 minute bus ride to imagine every horrible outcome. I could use a distraction… Have any funny stories?};
+\smsFrom, {Padfoot}, {Yeah, okay, funny stories, I can do that! Just give me a minute.};
+\smsFrom, {Padfoot}, {So, when I was a teenager, my parents sent me to a boarding school in L.A. A ``performing arts'' school. A real fancy one, where the celebrities send their kids.};
+\smsFrom, {Padfoot}, {My best friend really wasn't interested in performing arts at all. I think his parents just sent him there because some of their friends told them it was a good school. But he and I were easily bored and usually looking for ways to cause trouble.};
+\smsFrom, {Padfoot}, {We had this horrible class on Etiquette. Our teacher was a real piece of work. I swear she actually hated teenagers with a passion. She would dole out punishments for the slightest thing. If a girl in the class would giggle, or if a boy showed up with his shirt untucked, she would tut about how ``inappropriate'' it was and assign detention. Oh and she had this high pitched voice and spoke in a fake posh british accent, it made my skin crawl.};
+\smsFrom, {Padfoot}, {She would wear these big pink bows in her hair, and I swear to god Moony, she looked like a toad. I'm not being cruel, facts are just facts.}; 
+\smsFrom, {Padfoot}, {One day we were going to have a lesson on table manners, so they had set up a table like some English tea party. They had put out trays of sandwiches and tea cakes. You know the serving trays with the silver covers over them like they have at hotels.};
+\smsFrom, {Padfoot}, {It had been rainy and muddy out, so my friends James and Peter and I brought a shoebox outside and started digging up worms and filling the box with them.};
+\smsTo, {Moony}, {Oh I think I see where this is going \emoji{frog}\emoji{worm}};
+\smsFrom, {Padfoot}, {Shh \emoji{shushing-face} patience moony, I'm telling a story here};
+\smsFrom, {Padfoot}, {We snuck into the classroom early and started putting handfuls of worms under the serving lids. We must have miscalculated how much time we had, because the bell rang and people started coming into the classroom. So, we jumped into our seats and started frantically wiping our hands on the table cloth under the table. That's when I noticed the panicked look on Peter's face.};
+\smsFrom, {Padfoot}, {Well, Umbridge (that's toad face) noticed his squirming too, and was joyfully assigning him detention when she opened the lid of one of the serving trays. She started shrieking, and other kids were lifting their serving lids and more girls started shrieking, and before you knew it, the classroom was filled with glorious pandemonium.};
+\smsFrom, {Padfoot}, {Prongs (that's James) and I were literally rolling on the floor laughing. Especially when Pete finally stood up and we saw why he was squirming. He had sat directly on the box of worms. When he got up, his ass was covered in squished and squirmy worms and he was mortified!};
+\smsFrom, {Padfoot}, {And that's how Peter got his nickname, Wormtail. He would never live that one down.};
+\smsTo, {Moony}, {\emoji{face-with-tears-of-joy} Brilliant. I'm sure you all learned your lesson in detention?};
+\smsFrom, {Padfoot}, {Fat chance. We did the same thing a week later, but even better, we used actual toads. Harder to procure, but worth it for the payoff.};
+\smsTo, {Moony}, {\emoji{rolling-on-the-floor-laughing}\emoji{rolling-on-the-floor-laughing} That's amazing. You were naughty, weren't you? So if that's how Wormtail got his nickname, what about Prongs?};
+\smsFrom, {Padfoot}, {Ah, well it's not as funny of a story, but it's from the same class. We had to learn to tell forks apart by the number of tines. That was the word we used, but James kept using the word ``prongs'', like ``Which one has only 3 prongs?'' And I would laugh at him and tell him ``They aren't ‘prongs', idiot, their ‘tines''' and he would tell me
 ``they are too ‘prongs''' and then he would poke me with a fork and I would shout ``stop poking me with your prongs!'' and Umbridge would give us both detention. This happened multiple times.};
-\smsTo, {\Moony}, {I'm at the hospital now. Thank you for the story, and the distraction, Padfoot. I mean it. It really helped. \emoji{smiling-face-with-smiling-eyes}};
-\smsFrom, {\Padfoot}, {Any time, Moony.}
+\smsTo, {Moony}, {I'm at the hospital now. Thank you for the story, and the distraction, Padfoot. I mean it. It really helped. \emoji{smiling-face-with-smiling-eyes}};
+\smsFrom, {Padfoot}, {Any time, Moony.}
 }
----
+\myrulez
 
 \textbf{Remus} 
 
@@ -659,15 +660,14 @@ His parents' apartment was only about a mile from St.\ Mungos, so he walked ther
 
 He unlocked his phone again to get back to responding to emails, when he noticed a new message from Padfoot
 
-\smsConversation{\Padfoot}{
-	\smsFrom, {\Padfoot}, {I decided to walk Barty myself tonight. I tried to follow your usual path from the map on the app, and he seemed okay with it but I think he was disappointed by the lack of moonwalking.};
-	\smsFrom, {\Padfoot}, { {\centering\includegraphics[width=\textwidth]{dog-gdb55341e4_640}}
-	};
-	\smsFrom, {\Padfoot}, {See? All tuckered out.};
-	\smsFrom, {\Padfoot}, {I hope your mom is okay. I hope you are okay.};
-	\smsTo, {\Moony}, {thank you, you're sweet. I'm okay, really. My dad told me to go to his apartment and get some rest. I don't feel very restful though.};
-	\smsFrom, {\Padfoot}, {Want to talk?};
-	\smsTo, {\Moony}, {Yeah, I'd like that.};
+\smsConversation{Padfoot}{
+	\smsFrom, {Padfoot}, {I decided to walk Barty myself tonight. I tried to follow your usual path from the map on the app, and he seemed okay with it but I think he was disappointed by the lack of moonwalking.};
+	\smsFrom, {Padfoot}, {\smsPic{dog-gdb55341e4_640}{}};
+	\smsFrom, {Padfoot}, {See? All tuckered out.};
+	\smsFrom, {Padfoot}, {I hope your mom is okay. I hope you are okay.};
+	\smsTo, {Moony}, {thank you, you're sweet. I'm okay, really. My dad told me to go to his apartment and get some rest. I don't feel very restful though.};
+	\smsFrom, {Padfoot}, {Want to talk?};
+	\smsTo, {Moony}, {Yeah, I'd like that.};
 	\smsText, {}, {**Incoming call from Padfoot**} 
 }
 \textit{Oh god.} Remus thought, \textit{he meant ‘talk' talk, like voice talk.} Somehow, that felt so much more intimate than texting. Remus could feel his heart pounding in his chest as he swiped up, answering the call. ``Hi, Padfoot.''
@@ -708,7 +708,7 @@ Remus was really going to cry now. ``Thank you. Really, just, thanks.'' He manag
 
 Remus smiled, ``Yeah, this is nice. Cheers Padfoot.'' he said, and lifted his bottle as though to clink it with Padfoot's before taking a drink. And they talked for another hour about movies they'd watched and books they'd read and about the moon rising in the sky, until Remus's phone battery was running dangerously low and they both said goodnight and went inside to sleep.
 
-\chapter{An Exciting Opportunity!}
+\chapter*{Chapter 7}
 
 \textbf{Remus} 
 
@@ -737,35 +737,36 @@ Remus sighed, ``I'm trying not to read too much into it. He's fun to talk to, an
 
 ``I can get an escort to my car, but I can't ask them to do anything just because I have a feeling. I haven't actually seen Severus in months. He hasn't done anything I have evidence of aside from the text messages.'' She finished off the last of her beer and set it on the table. ``Shall we head to the hospital now? Only if you're ready.'' He nodded, setting down his own empty bottle and pushing himself off the couch with a groan.
 
----
+\myrulez
 
 \textbf{Sirius} 
 
-\smsConversation{\Emma}{
-	\smsFrom, {\Emma}, {Sirius, babe! I have exciting news!!! What are you doing this September?};
-	\smsFrom, {\Emma}, {I'll tell you what you are doing, you are going to New York Fashion Week!};
-	\smsTo, {\Sirius}, {Hey Em {\textless}3};
-	\smsTo, {\Sirius}, {LOL that's the dream, right.};
-	\smsFrom, {\Emma}, {Sirius, you're not listening babe --- You are going to come to Fashion Week! Here's the deal, I was at an event with The Weird Sisters and I ran into none other than Madam Malkin herself. We got to talking and babe, you would be the perfect model for her new men's suit line, which I told her. I showed her a few pictures and she agreed. She wants you! You need to send a portfolio ASAP, I'll email ya with the details. But babe, you are a shoe-in!};
-	\smsTo, {\Sirius}, {Omigod Em, that's incredible! Thank you so much!};
-	\smsFrom, {\Emma}, {You deserve it, babe, this is going to be huge for you! Oh but fair warning there may be one small hurdle…};
-	\smsFrom, {\Emma}, {One of the producers of the show is Lucius Malfoy.};
-	\smsTo, {\Sirius}, {Oh, fuck. Well, it was a nice dream. There's no way he'll let her hire me, I'm a dangerous suppressive. \emoji{sad-but-relieved-face}};
-	\smsFrom, {\Emma}, {Malkin is on your side though, she thinks the Scientologists are wackos so she's willing to fight for you. But your portfolio needs to blow the rest of the board away. And it will, you are seriously perfect for this job, hon. Screw Malfoy, you got this!!! \emoji{thumbs-up}\emoji{raising-hands}\emoji{flexed-biceps}\emoji{hugs}};
-	\smsTo, {\Sirius}, {Thanks for the heads up, and Em thanks for everything really. If this works out I owe you big!}
+\smsConversation{Emmeline (Emma)}{
+	\smsFrom, {Emma}, {Sirius, babe! I have exciting news!!! What are you doing this September?};
+	\smsFrom, {Emma}, {I'll tell you what you are doing, you are going to New York Fashion Week!};
+	\smsTo, {Sirius}, {Hey Em {\textless}3};
+	\smsTo, {Sirius}, {LOL that's the dream, right.};
+	\smsFrom, {Emma}, {Sirius, you're not listening babe --- You are going to come to Fashion Week! Here's the deal, I was at an event with The Weird Sisters and I ran into none other than Madam Malkin herself. We got to talking and babe, you would be the perfect model for her new men's suit line, which I told her. I showed her a few pictures and she agreed. She wants you! You need to send a portfolio ASAP, I'll email ya with the details. But babe, you are a shoe-in!};
+	\smsTo, {Sirius}, {Omigod Em, that's incredible! Thank you so much!};
+	\smsFrom, {Emma}, {You deserve it, babe, this is going to be huge for you! Oh but fair warning there may be one small hurdle…};
+	\smsFrom, {Emma}, {One of the producers of the show is Lucius Malfoy.};
+	\smsTo, {Sirius}, {Oh, fuck. Well, it was a nice dream. There's no way he'll let her hire me, I'm a dangerous suppressive. \emoji{sad-but-relieved-face}};
+	\smsFrom, {Emma}, {Malkin is on your side though, she thinks the Scientologists are wackos so she's willing to fight for you. But your portfolio needs to blow the rest of the board away. And it will, you are seriously perfect for this job, hon. Screw Malfoy, you got this!!! \emoji{thumbs-up}\emoji{raising-hands}\emoji{flexed-biceps}\emoji{hugs}};
+	\smsTo, {Sirius}, {Thanks for the heads up, and Em thanks for everything really. If this works out I owe you big!}
 }
 
-\smsConversation{\Marlene}{
-	\smsTo, {\Sirius}, {Marls, what are you doing tonight?};
-	\smsFrom, {\Marlene}, {No plans, did you want to hit up the Hogs Head again?
+\smsConversation{Marlene}{
+	\smsTo, {Sirius}, {Marls, what are you doing tonight?};
+	\smsFrom, {Marlene}, {No plans, did you want to hit up the Hogs Head again?
 	\emoji{winking-face-with-tongue}\emoji{tropical-drink}\emoji{clinking-beer-mugs}};
-	\smsTo, {\Sirius}, {LOL I'm still recovering from last time!};
-	\smsTo, {\Sirius}, {Actually, I need some help putting together a portfolio for Madame Malkin to apply for NY fashion week. Emma says she wants me, just need to impress the board enough and I'm in};
-	\smsFrom, {\Marlene}, {Shit, Sirius, that's huge! Of course I'll help you. Meet at the studio in an hour?};
-	\smsTo, {\Sirius}, {Hell yeah, on my way!}
+	\smsTo, {Sirius}, {LOL I'm still recovering from last time!};
+	\smsTo, {Sirius}, {Actually, I need some help putting together a portfolio for Madame Malkin to apply for NY fashion week. Emma says she wants me, just need to impress the board enough and I'm in};
+	\smsFrom, {Marlene}, {Shit, Sirius, that's huge! Of course I'll help you. Meet at the studio in an hour?};
+	\smsTo, {Sirius}, {Hell yeah, on my way!}
 }
 
----\newline
+\myrulez
+
 \textbf{Remus}
 
 Lily gave Remus a ride back to his University housing. His mother was in ``stable'' condition, and there wasn't any more he could do there. But it still wasn't going to be easy to try to go about his daily life, just waiting for another phone call if and when her condition changed. It was like a constant weight on his chest, an anxiety that gnawed at him making him simultaneously exhausted and jittery. Or maybe that was all the coffee. Anyway, he had plenty to keep him busy if he could just keep going through the motions. Just keep moving. It helped time pass.
@@ -800,7 +801,7 @@ It was nearly nine o'clock when Remus walked into the 24 hour animal hospital. T
 
 Remus explained the incident that had caused the injury and told Dr.\ Hagrid that the dog's owner was on his way. The doctor didn't seem too concerned about the paperwork, focused entirely on Barty. He gave him a sedative and cleaned the wound, explaining that he would need to stitch it up, and keep Barty overnight, but he would be just fine. Remus started to feel light headed from the strange smells of the animal hospital and from watching as Dr.\ Hagrid tended the wound. He thanked the doctor, and asked if it was alright if he went outside for some fresh air for a bit to clear his head. And that's where he was when he heard the rumble of a motorcycle pulling into the parking lot. And when he looked up, there was Sirius Black, running his fingers through his thick dark hair and grinning at him. 
 
-\chapter{Chapter 8}
+\chapter*{Chapter 8}
 
 \textbf{Sirius} 
 
@@ -834,12 +835,12 @@ Sirius pulled on his own helmet and positioned himself on the bike, calling behi
 \smsConversation{Prongs}{	
 	\smsFrom, {Prongs}, {I dropped Remus off at the pet hospital.};
 	\smsFrom, {Prongs}, {Sirius, he's so sweet. You need to make him our friend.};
-	\smsTo, {\Sirius}, {I'm way ahead of you, already invited him over. I just need to fill out a couple of forms then I'm bringing him to the house to clean up his cuts and have a beer.};
+	\smsTo, {Sirius}, {I'm way ahead of you, already invited him over. I just need to fill out a couple of forms then I'm bringing him to the house to clean up his cuts and have a beer.};
 	\smsFrom, {Prongs}, {Oh good, I'll find a clean t-shirt and some gym shorts for him so he can get out of those bloody clothes.};
 	\smsFrom, {Prongs}, {Think Remus likes IPA? NVM I'll just bring up a variety from the basement fridge. See ya soon!!\emoji{clinking-beer-mugs}};
-	\smsTo, {\Sirius}, {Anything is fine, thanks Prongs!}
+	\smsTo, {Sirius}, {Anything is fine, thanks Prongs!}
 }
----
+\myrulez
 
 \textbf{Remus} 
 
@@ -907,26 +908,26 @@ Everyone was quiet for a moment. Remus glanced over at Sirius, who was watching 
 
 ``What? It's true! You were like \textit{`Oh, he's cute, I want this one!'}'' James was really laughing now, and retaliating by flicking more bottle caps back at Sirius. Remus covered his head with his arms, hiding his own reddening face while trying to stay out of the line of fire as the battle continued.
 
-\chapter{Wuv}
+\chapter*{Chapter 9}
 
 \textbf{Sirius} 
 
 \smsConversation{Moony}{
-	\smsTo, {\Padfoot}, {Good Morning, Moony!};
-	\smsFrom, {\Moony}, {Padfoot, it's 12:30. It's literally the afternoon now.};
-	\smsTo, {\Padfoot}, {Good Afternoon, Moony! How was your morning, then?};
-	\smsFrom, {\Moony}, {Good Afternoon, Padfoot. My morning was rough. It took a lot of espresso to get me through my early class. Feel pretty good now, though. Any news about Barty?};
-	\smsTo, {\Padfoot}, {I'm about to go pick him up. They said he is in good shape, but no moonwalking for a couple of days.
+	\smsTo, {Padfoot}, {Good Morning, Moony!};
+	\smsFrom, {Moony}, {Padfoot, it's 12:30. It's literally the afternoon now.};
+	\smsTo, {Padfoot}, {Good Afternoon, Moony! How was your morning, then?};
+	\smsFrom, {Moony}, {Good Afternoon, Padfoot. My morning was rough. It took a lot of espresso to get me through my early class. Feel pretty good now, though. Any news about Barty?};
+	\smsTo, {Padfoot}, {I'm about to go pick him up. They said he is in good shape, but no moonwalking for a couple of days.
 	\emoji{crying-face}};
-	\smsTo, {\Padfoot}, {Are you walking Hokey and Pokey tonight?};
-	\smsFrom, {\Moony}, {If she hasn't fired me, then yes, that's the plan};
-	\smsTo, {\Padfoot}, {James wants me to ask you to come over after you drop off the poodles because he already misses you, the soppy idiot.};
-	\smsFrom, {\Moony}, {Awww, tell James I miss him too. \emoji{smiling-face-with-heart-eyes} I'd love to come and visit him.};
-	\smsTo, {\Padfoot}, {I hate you both.};
-	\smsFrom, {\Moony}, {It's a good thing I'm so cute then \emoji{winking-face}};
-	\smsTo, {\Padfoot}, {Oh my god.};
-	\smsFrom, {\Moony}, {See you tonight, Padfoot.};
-	\smsTo, {\Padfoot}, {Yeah, see you then Moony.}
+	\smsTo, {Padfoot}, {Are you walking Hokey and Pokey tonight?};
+	\smsFrom, {Moony}, {If she hasn't fired me, then yes, that's the plan};
+	\smsTo, {Padfoot}, {James wants me to ask you to come over after you drop off the poodles because he already misses you, the soppy idiot.};
+	\smsFrom, {Moony}, {Awww, tell James I miss him too. \emoji{smiling-face-with-heart-eyes} I'd love to come and visit him.};
+	\smsTo, {Padfoot}, {I hate you both.};
+	\smsFrom, {Moony}, {It's a good thing I'm so cute then \emoji{winking-face}};
+	\smsTo, {Padfoot}, {Oh my god.};
+	\smsFrom, {Moony}, {See you tonight, Padfoot.};
+	\smsTo, {Padfoot}, {Yeah, see you then Moony.}
 }
 
 When the doorbell rang (still the damn Jingle Bells chorus), James and Sirius were in the middle of an intense game of air hockey in the rec room. James had just pulled ahead and only needed one more goal to win, so he protested loudly when Sirius abandoned the game. ``Oh, that'll be Moony, gotta go.'' he said as he tossed his paddle on the table running toward the stairs.
@@ -991,7 +992,7 @@ Remus put a hand on Sirius's arm, squeezing it ever so gently. ``Of course he do
 He looked at Sirius apologetically. Sirius pouted, and Remus leaned over and kissed him. Just the slightest, sweetest touch of their lips, and then he pulled himself away, standing up from the bed and reaching for Sirius's hand, laughing
 ``Come on, you big baby. I'm going to destroy your roommate at air hockey.''
 
----
+\myrulez
 
 \textbf{Remus} 
 
@@ -1088,7 +1089,7 @@ I'll text you.''
 
 ``Okay. Night!'' Sirius waved, still not moving as he watched Remus turn and walk out of the park toward campus housing.
 
-\chapter{The Sea Org}
+\chapter*{Chapter 10}
 
 \textbf{Regulus} 
 
@@ -1104,7 +1105,7 @@ He wasn't helping anyone, he thought, as his cousin's shoe collided with his sto
 
 Regulus was broken.
 
----
+\myrulez
 
 \textbf{Lily} 
 
@@ -1124,10 +1125,9 @@ Alice was a social worker for Child Protective Services, and often had emergenci
 Lily hadn't eaten dinner since she was planning on filling up on scones and lattes with Alice, so she decided since she was here, she might as well get a coffee and a sandwich or something. The cafe was pretty busy, and there was a short line to order at the register. She kept her phone out and scanned the room for signs of danger, as was her instinct now. No sign of Severus, but her eyes fell on a messy haired man with thick rimmed glasses who was sitting alone and working on a laptop at a table in the corner. He had been looking right at her, and when their eyes met, he smiled. It was a disarming, friendly smile, and she couldn't help but smile back, but then quickly looked away, focusing again on her phone. Maybe she would just look up pictures of dresses to send to Alice while she waited.
 
 \smsConversation{Alice}{
-\smsTo, {Lily}, {Oh Alice, you would be gorgeous in this one!};
-\smsTo, {Lily}, { {\centering\includegraphics[width=\textwidth]{jonathan-borba--shn8ecaH2w-unsplash}}
-};
-\smsFrom, {Alice}, {Yes!! **saving**}
+	\smsTo, {Lily}, {Oh Alice, you would be gorgeous in this one!};
+	\smsTo, {Lily}, {{\smsPic{jonathan-borba--shn8ecaH2w-unsplash}{}}};
+	\smsFrom, {Alice}, {Yes!! **saving**}
 }
 She smiled and stepped up to the counter to place her order, and then stood to the side next to the display of napkins and straws and sugars. Would it be funny or obnoxious to send joke dress pictures while Alice was busy working? She decided to look for some anyway and was giggling to herself at the Google image results when she heard a voice that gave her chills.
 
@@ -1169,7 +1169,7 @@ She smiled back at him. ``Isn't it great?'' she said after swallowing her bite. 
 
 ``Oh yeah, same here!'' He said. Lily ate her sandwich and sipped her latte, smiling and laughing while James told her all about how happy Sirius had been since he met Remus, and about how much fun they all had together, and about how Remus was an air hockey legend.
 
-\chapter{First Date}
+\chapter*{Chapter 11}
 
 \textbf{Remus} 
 
@@ -1263,8 +1263,6 @@ Remus temporarily forgot his despair in his surprise at seeing his friend, and h
 
 ``Hey, Sirius, this is Lily. Lily, Sirius.'' He turned to address Remus and Lily, ``Um, why don't you two go catch up in the living room, I'm gonna talk to Pads for a minute.'' and he handed them the beers and headed up the stairs, grabbing Sirius's arm and dragging him along toward his bedroom.
 
----
-
 Lily filled Remus in on what had happened at the cafe, her confrontation with Snape and how it had coincidentally led to her meeting James Potter. She and James had talked for a while and he told her that he had quite a bit of experience dealing with stalkers and harassment, on Sirius's behalf. He was able to spot Snape's creepy behavior from a mile away and had been keeping an eye on them, stepping in as soon as he saw Snape grab her arm. He invited her back to the house, partly because she didn't want to be alone at the moment, but also to talk about strategies to protect herself from Severus.
 
 Remus felt the guilt rise up his throat, almost choking him. How could he have been so stupid? He was a psychologist for god's sake, he should have recognized the signs of trauma that led Sirius to be so skittish and defensive. And of course he needed to take it slow. He needed to really earn Sirius's trust. Oh fuck. He had to apologize.
@@ -1273,7 +1271,7 @@ James came back into the living room and Remus looked at him, the question clear
 
 Remus breathed out with relief and gave James a quick hug ``Thank you, Prongs!'' he said as he all but ran up the stairs.
 
----
+\myrulez
 
 He stood at Sirius's door and took a deep breath before softly knocking. ``Padfoot, it's me. Can I come in?''
 
@@ -1289,7 +1287,7 @@ Remus scoffed, ``Oh please, you know what you look like. C'mere.'' He pulled Sir
 
 ``There you go, being all adorable again.'' Remus pulled back to watch Sirius blush and felt the giddy happiness of earlier in the night fill his chest again. ``I'd love to stay and cuddle with you, Padfoot.''
 
-\chapter{Mother}
+\chapter*{Chapter 12}
 
 \textbf{Remus} 
 
@@ -1307,7 +1305,7 @@ Sirius smirked at him again. ``Well, there were two candles on the table, Moony.
 
 Remus laughed and as he finally entered the bathroom he heard Sirius call to him ``Laugh all you want, my wish came true, didn't it?''
 
----
+\myrulez
 
 Remus had found his phone drained of battery and needed to borrow a charger. He left it plugged in on the kitchen counter while they poured bowls of cereal and almond milk. They heard the front door open and Barty skittered into the kitchen headed for his food and water bowls. James followed behind him, sweaty from his morning jog and beaming as he patted Sirius on the back and kissed the top of his head. ``Good morning, boys!''
 
@@ -1321,11 +1319,11 @@ Remus pushed around his bran flakes with his spoon. ``I'm so glad you were there
 
 James shook his head, ``No, Remus, it was fine. You were a little preoccupied with other things.'' He wiggled his eyebrows nodding toward Sirius, who kicked him under the table. ``Ouch!'' James and Sirius were glaring at each other and Remus was afraid they were going to devolve into flinging soggy bran flakes at each other when they were all distracted by a chime from Remus's phone.
 
-He took his empty bowl into the kitching dropping it in the sink before picking up his phone to check his messages. He must have audibly gasped because when he looked up James and Sirius were both watching him with concern.
+He took his empty bowl into the kitchen dropping it in the sink before picking up his phone to check his messages. He must have audibly gasped because when he looked up James and Sirius were both watching him with concern.
 
 ``My mom is awake.''
 
----
+\myrulez
 
 \smsConversation{Lily}
 {
@@ -1350,7 +1348,7 @@ He took his empty bowl into the kitching dropping it in the sink before picking 
 \smsTo, {Remus}, {And good luck with your date! \emoji{kissing-face}}
 }
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -1393,7 +1391,7 @@ Remus's eyes were filled with tears. ``I'm afraid it's going to be bad news. I'm
 
 ``Thank you, Padfoot.'' Remus said in a sigh of relief. And they held each other until the doctor called them in for the meeting.
 
----
+\myrulez
 
 As promised, Sirius held Remus's hand as they were told that Mrs.\ Lupin was no longer responding to treatment, and they would be switching her to hospice care. They didn't know how much time she had, but this was her chance to say her goodbyes and get her affairs in order.
 
@@ -1406,7 +1404,7 @@ when asked about it, turning off his notifications. Sirius just let it go. Becau
 
 Sirius told himself, \textit{this is what Moony needs}. But deep down he knew, it was the opposite of what Remus needed. But it was what he, Sirius, wanted. And Sirius was so, so selfish.
 
-\chapter{The Slacker}
+\chapter*{Chapter 13}
 
 \textbf{Remus} 
 
@@ -1455,7 +1453,7 @@ Remus's heart melted. ``Yeah, Pads, we're okay. See you tonight?''
 
 ``Mmhm, I'll keep the bed warm for you, baby.'' Remus replied, and smiled to himself as he heard Sirius's lustful groan in response. 
 
---- 
+\myrulez 
 
 Lily was more than willing to give Remus a ride to St.\ Mungo's, and she picked him up at campus housing a little before
 4:00. He felt much better after his talk with his advisor. Due to his special circumstances, he would be granted an incomplete grade in his last two courses, giving him until the end of the summer to complete the coursework and exams. He would also be granted an extension on his practicum, completing his hours in the fall semester. This pushed his graduation to December, but at least it was one less thing to worry about for the moment. 
@@ -1468,7 +1466,7 @@ When they arrived at St.\ Mungo's, the hospice nurse hurried over to him before 
 
 Hope was not conscious, as she hadn't been for the last two days. They had her on a regime of morphine to relieve her pain as her organs slowly failed one by one. They waited while her breathing slowed. It was an agonizing process. But in the end, it was Lily who was there with Remus, holding his hand while his mother took her final breaths, and cradling him in her arms while he sobbed.
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -1508,7 +1506,7 @@ Chapter End Notes
 All of my favorite stories have Sirius feeling everything a bit too strongly, so I can definitely see that coming through here. Poor puppy! I love him so much. 
 
 I think it's time for a nice fluffy chapter next. These boys deserve a summer of love. LOL So stay tuned!
-\chapter{Summer Vacation}
+\chapter*{Chapter 14}
 
 \textbf{Remus} 
 
@@ -1529,7 +1527,7 @@ Sirius was gaining confidence in bed too. He had been so shy and nervous at firs
 
 It was summer in Southern California, and it was a great time to be young and in love.
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -1563,7 +1561,7 @@ Remus squeezed Sirius's arm. ``Ooh, burgers. Let's go, Pads, I'm starving!''
 
 ``Fine.'' Sirius reluctantly removed himself from Remus's embrace, pulling him up with him. ``Save our spot!'' he called to Mary, as they followed the crowd to the food tables.
 
----
+\myrulez
 
 \textbf{Remus} 
 
@@ -1591,7 +1589,7 @@ Lily squeezed his leg. ``It's fine, Remus. I'm sure Sirius knows you're proud of
 
 Everyone forgot about whatever they were discussing and oohed and aahed as the sky erupted in fireworks of all colors and shapes and sizes. Remus's eyes found Sirius on the ground floor below, who waved and blew a kiss to him before returning his attention to the sparkling display. He looked around at the pure joy on his friends' faces, and relaxed, sipping his watermelon flavored beverage and smiling. Life really was good.
 
-\chapter{Remus gets embarrassed at Alice and Frank's wedding}
+\chapter*{Chapter 15}
 
 \textbf{Remus} 
 
@@ -1624,11 +1622,11 @@ The fact that his father was moving, and ending the lease on the apartment, caus
 	\smsTo, {Moony}, {Now I know this might upset you...};
 	\smsTo, {Moony}, {But Prongs has asked me to move in with him.};
 	\smsTo, {Moony}, {And I have accepted.};
-	\smsFrom, {\Padfoot}, {I've lost you to a better man already.};
-	\smsFrom, {\Padfoot}, {Can't even be mad about it, really.};
+	\smsFrom, {Padfoot}, {I've lost you to a better man already.};
+	\smsFrom, {Padfoot}, {Can't even be mad about it, really.};
 	\smsTo, {Moony}, {Knew you would understand \emoji{face-blowing-a-kiss}}
 }
----
+\myrulez
 
 Remus chose a room on the 3rd floor, near his favorite balcony. It was a modestly sized room, but it worked well for him, since he didn't own much furniture anyway. It was right above Sirius's bedroom and close to the stairs, so even though he had his own space, it was easy to get to each other's rooms. Sirius came to his room a couple of times the first week, because it was new and exciting, but they didn't fit well on Remus's double mattress, and ended up reverting to their usual habit of spending most nights in Sirius's bed. They had set a boundary without discussion. When Remus was in his room it meant he needed to be alone to study. 
 
@@ -1650,30 +1648,29 @@ Remus leaned over, kissing him chastely on the lips. ``You're important, too, th
 
 ``Oh right. The fashion show is coming up. So, um, are you excited? Nervous?'' He wasn't sure what questions he was supposed to ask.
 
-``A little of both, I guess.'' 
+``A little of both, I guess.''
 
 ``Do you want to talk about it?'' Remus asked, running a hand through Sirius's hair, smoothing it away from his face.
 
 ``No, don't really feel like talking.'' Sirius kissed him hungrily, hands desperate, pulling Remus on top of him, and there was very little talking for the rest of the night. 
-
----
+\myrulez
 
 \smsConversation{Padfoot}{
-	\smsFrom, {\Padfoot}, {\centering\includegraphics[width=\textwidth]{ivan-mani-bRv5vZcbAa4-unsplash}};
-	\smsFrom, {\Padfoot}, {We made it. New York, New York};
+	\smsFrom, {Padfoot}, {\smsPic{ivan-mani-bRv5vZcbAa4-unsplash}{}};
+	\smsFrom, {Padfoot}, {We made it. New York, New York};
 	\smsTo, {Moony}, {Miss you already! \emoji{face-blowing-a-kiss}}
 }
 
 \textbf{(Two days later)}
 
 \smsConversation{Padfoot}{
-	\smsFrom, {\Padfoot}, {Mary's lunch. I hate her. {\centering\includegraphics[width=\textwidth]{peter-bravo-de-los-rios-OklpRh8-Sns-unsplash}}};
-	\smsFrom, {\Padfoot}, {My lunch. This diet sucks.  {\centering\includegraphics[width=\textwidth]{kelly-visel-zXn-amUiMJ4-unsplash}}}
+	\smsFrom, {Padfoot}, {Mary's lunch. I hate her. \smsPic{peter-bravo-de-los-rios-OklpRh8-Sns-unsplash}{a slice of New York style pizza and a beer with parmesan cheese and red pepper flakes shakers}};
+	\smsFrom, {Padfoot}, {My lunch. This diet sucks. \smsPic{kelly-visel-zXn-amUiMJ4-unsplash}{a salad made mostly of leafy greens}}
 }
 \textbf{(A couple of hours later)} 
 
 \smsConversation{Padfoot}{
-	\smsFrom, {\Padfoot}, {I'm a proper tourist now.  {\centering\includegraphics[width=\textwidth]{xiaochuan-xu-0fMSLUYClVI-unsplash}}}
+	\smsFrom, {Padfoot}, {I'm a proper tourist now. {\smsPic{xiaochuan-xu-0fMSLUYClVI-unsplash}{Someone taking a picture of the Statue of Liberty}}}
 }
 \textbf{(many hours later)}
 
@@ -1681,15 +1678,15 @@ Remus leaned over, kissing him chastely on the lips. ``You're important, too, th
 	\smsTo, {Moony}, {Oh god that pizza looks good.};
 	\smsTo, {Moony}, {Sorry for the late response. I had a rough day. It looks like you had fun sight seeing with Mary.};
 	\smsTo, {Moony}, {Are you still up?};
-	\smsFrom, {\Padfoot}, {I'm awake, just watching TV in the hotel room.};
-	\smsFrom, {\Padfoot}, {Tell me about your rough day?};
+	\smsFrom, {Padfoot}, {I'm awake, just watching TV in the hotel room.};
+	\smsFrom, {Padfoot}, {Tell me about your rough day?};
 	\smsTo, {Moony}, {Said goodby to my dad, he flew back to Mass today. And Lily helped me drop the last of my mom's clothes off at the women's shelter. Just emotionally draining I guess.};
 	\smsTo, {Moony}, {I'm in your bed hugging your pillow because it smells like you.};
-	\smsFrom, {\Padfoot}, {Wish I was there to hug you.};
+	\smsFrom, {Padfoot}, {Wish I was there to hug you.};
 	\smsTo, {Moony}, {Me too. You should get some rest though, it's late there. I miss you.};
-	\smsFrom, {\Padfoot}, {Miss you too. Night, Moony.}
+	\smsFrom, {Padfoot}, {Miss you too. Night, Moony.}
 }
----
+\myrulez
 
 Alice and Frank's wedding ceremony was at a beautiful golf resort just outside of town. The ceremony was to be held at four o'clock in the afternoon, but Lily needed to be there early to perform her Maid of Honor duties, which mostly involved helping Alice get ready. Since they were all driving together, James and Remus were there early, too, and found themselves in a cozy lounge drinking champagne and eating cheese and crackers from a tray with Frank and some of the other bridal party members. The television was on with the volume muted, but it was showing coverage of the Fashion Week event. It was Frank who noticed first when Sirius came onto the screen.
 
@@ -1705,7 +1702,7 @@ Sirius put on his fake smile, the one that was just for show, and responded auto
 
 ``It's just an image thing. He's not out publicly.'' he mumbled before downing the rest of his champagne, choking on it a little. He sputtered and coughed as Frank patted him on the back, motioning for James to turn off the TV, and the people in the room turned their attention away from Remus and continued chatting about the upcoming wedding. 
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -1750,7 +1747,7 @@ Pandora finally released his arm and stepped away from him. ``She wasn't willing
 
 And she was gone.
 
-\chapter{Sirius has another mental breakdown}
+\chapter*{Chapter 16}
 
 \textbf{Remus} 
 
@@ -1776,7 +1773,7 @@ Remus's mind was racing. He knew Sirius had trauma from his past that made him s
 
 James put an arm around Remus's shoulder, trying to comfort him. ``I know, it sucks, but you just have to wait for him to come to you.''
 
----
+\myrulez
 
 It turned out he didn't have to wait too long. But when Sirius came to him that evening, it wasn't to talk. Remus was sitting on his bed, reading the same paragraph over and over in his book because he couldn't focus enough to process it, when he heard footsteps coming up the stairs toward his room. He put the book down and jumped up when he saw Sirius at his door. ``Padfoot! Oh, thank god.'' He met Sirius at the door, pulling him into a tight hug, flooded with relief. Sirius didn't speak, but hugged him back. His breathing was odd, Remus thought he might be crying. ``I've been so worried, you wouldn't talk to me. Padfoot, please talk to me.''
 
@@ -1792,7 +1789,7 @@ Sirius glared at him, ``Are you using psychology against me? God, I thought I wa
 
 ``What?? Sirius, wait!'' Sirius was already out of the room. He didn't even bother to slam the door. He just walked quickly back to his own room and closed the door. Remus was shocked and confused. He couldn't understand what he had done wrong. He followed Sirius only as far as the stairs before he dropped to the ground, wracked with sobs. 
 
----
+\myrulez
 
 Not knowing what else to do, Remus went to James for help as soon as he had composed himself. He found him in the gym downstairs, probably working off some excess nervous energy by running on the treadmill. When Remus asked if he could talk, he grabbed a towel and they moved to the rec room area, sitting in bean bag chairs. Remus explained what had happened with Sirius. ``Maybe it's a good sign.'' He said, starting to see things more clearly now that he was further from the situation and could properly analyze it. ``Depressive episodes can leave people feeling numb. He said he felt empty. He just wanted to feel something else. And he came to me. That's something.''
 
@@ -1812,7 +1809,7 @@ Remus sat back, stunned. Suddenly, so many strange things Sirius had said in pas
 
 ``Something stronger. Whiskey.'' Remus replied, and James was quick to comply.
 
----
+\myrulez
 
 Another day and a half passed before he saw Sirius again. Remus was sitting on the couch in the living room, reading a book, when he heard Sirius's timid ``Moony?''. He looked up to see Sirius standing in the center of the room. He had recently showered, his hair was still wet. He was dressed in a clean t-shirt and jeans. ``I'd like to talk now, if you still want to talk to me…'' He was back, shy and sweet, and himself. He was so lovely, Remus thought his heart would burst.
 
@@ -1839,7 +1836,7 @@ Sirius laughed and kissed him. ``I love you, too, Remus Lupin. I hope you know w
 Chapter End Notes
 
 This one was tough to write. I'm just glad Sirius is finally ready to get help (from an actual psychiatrist because love alone won't fix him, that's a dangerous trope and not gonna happen on my watch!!)
-\chapter{Regulus has a revelation about his Church}
+\chapter*{Chapter 17}
 
 \textbf{Regulus} 
 
@@ -1861,7 +1858,7 @@ After everything he had done, after everything he had given up willingly, the ch
 
 Regulus wasn't numb anymore. But all he felt was anger. And all he wanted was revenge.
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -1890,7 +1887,7 @@ Regulus wasn't numb anymore. But all he felt was anger. And all he wanted was re
 	\smsFrom, {Pandora}, {Okay, get them together and I'll call you on Saturday at 1400 hours to make a plan.};
 	\smsTo, {Sirius}, {We'll be ready.}
 }
----
+\myrulez
 
 The house buzzed with excited, nervous energy on Halloween morning as the gang prepared for their rescue mission. The plan was to take Marlene's van in a group costume to blend in with other civilians enjoying the Trunk or Treat event. Lily and James had been in charge of costumes, and Mary came over that morning to do make-up. Marlene had even painted banners to decorate the van. It was now the Mystery Machine and it would be carrying the Scooby-Doo gang to Scientology's Gold Base. 
 
@@ -1912,7 +1909,7 @@ They found a spot in the crowded lot, and opened up the back of the van. The gro
 
 The head of Scientology himself, Tom Riddle, was going to be there for a photo op with some of the parishioners at some point that afternoon. That would be her chance to infiltrate the building. Finally Sirius's phone buzzed and he nearly jumped out of his skin. He looked at the message and nodded to Marlene. It was time. She picked up her duffel bag of photography equipment and headed toward the building.
 
----
+\myrulez
 
 \textbf{Regulus} 
 
@@ -2000,7 +1997,7 @@ Regulus was intrigued now. How could he possibly have anything to do with his br
 
 He could get used to this. He couldn't believe how comfortable he felt with this group of people. Strangers to him, but they teased each other and laughed and smiled so easily. He could feel the love between them. His body buzzed with it, soaking it in. For once in his miserable life, he had finally done something right.
 
-\chapter{Chapter 18}
+\chapter*{Chapter 18}
 
 \textbf{Sirius} 
 
@@ -2041,7 +2038,7 @@ It was James who spoke up next. ``Well, let them try. If they do, I know a damn 
 
 Everyone turned to look at him. He grinned, ``My mentor, Albus Dumbledore.''
 
----
+\myrulez
 
 \textbf{Remus} 
 
@@ -2101,7 +2098,7 @@ Remus put a hand on his cheek. ``Hey, it's okay. True, obviously I'm not excited
 
 Sirius laughed. ``I love you too, Moonbeam.''
 
-\chapter{Thanksgiving at the Potter Mansion!}
+\chapter*{Chapter 19}
 
 \textbf{Remus} 
 
@@ -2175,7 +2172,7 @@ She sighed and put her head in her hands. ``We don't know anything for sure yet�
 
 ``You got it. Oh, and I'll go grab that recipe book. We can look through it together.'' Remus said as he headed to the kitchen, and Lily gasped and clapped her hands. ``Yes! Great idea!''
 
----
+\myrulez
 
 \textbf{Sirius} 
 
@@ -2195,7 +2192,7 @@ Sirius, on the other hand, hesitated. It was true that the harassment on social 
 
 Sirius swallowed. Seeing the determination in his brother's face, he remembered his own anger at what they had done to him and his family. Regulus was right, as unappealing as the thought of getting into a court battle with the church sounded, someone needed to hold them accountable. He turned to Dumbledore and nodded. ``Okay,I'm in. What do I need to do?''
 
----
+\myrulez
 
 Sirius wasn't \textit{jealous} of Lily. Okay, sure, it stung a bit when he came home earlier that week to find Remus going through his mother's recipe book with Lily. It had felt so awkward when Sirius reminded them that he also likes to cook, and would like to help make some of Mrs.\ Lupin's recipes. Lily tried to make him feel included after that, but he still somehow felt like he was intruding. 
 
@@ -2222,7 +2219,7 @@ Lily put down the peeler and turned to face him. She crossed her arms and glance
 
 ``Oh, Sirius. Of course!'' She put down her peeler and wrapped her arms around him sniffling. He was surprised by her emotional outburst, but he leaned into the embrace, patting her on the back. Well, maybe he hadn't fucked it up too bad afterall.
 
----
+\myrulez
 
 ``Anyone ready for pie?'' Sirius offered, as he stood to take some dishes from the table. It had been a very successful Thanksgiving meal, and he was quite proud of himself. They were all stuffed, but the apple pie smelled delicious, and he couldn't wait to see how Remus liked it. They had been joined by Pandora and Xenophilius, who were always fascinating to talk to. Marlene and Dorcas also joined them for the meal, and Marls and Xeno were having a lively discussion about web-based marketing. Regulus and Pandora were telling stories about their time in the Sea Org and laughing while Dorcas stared at them in shock. Lily and James were softly whispering to each other at the end of the table.
 
@@ -2240,7 +2237,7 @@ The whole room cheered and Lily held out her hand to show off an engagement ring
 
 ``Yeah, I know.'' Sirius kissed him back and then rested his head on Remus's shoulder looking around at his friends, and his heart swelled. ``It's definitely a good change.''
 
-\chapter{Epilogue}
+\chapter*{Epilogue}
 
 \textit{\textbf{19 Months Later} }
 
@@ -2294,13 +2291,13 @@ Regulus ruffled Harry's hair and smiled. ``Yeah, okay. Here I go. Bye bye, Harry
 
 ``Bye-bye!'' Harry said happily in his little baby voice, waving his little baby hand as Regulus headed out the door.
 
----
+\myrulez
 
 \textbf{Remus} 
 
 \smsConversation{Lily}{
 	\smsTo, {Remus}, { {\centering\includegraphics[width=\textwidth]{the-travel-nook-2FoqQ0EPwLg-unsplash}}
-	  Greetings from Jamaica! Wish you were here!};
+	 Greetings from Jamaica! Wish you were here!};
 	\smsFrom, {Lily}, {Oh wow, definitely jealous. But you do not wish I was there! I know you are enjoying your alone time with your \textit{husband!} \emoji{man}\emoji{red-heart}\emoji{man}};
 	\smsTo, {Remus}, {Yes, I am enjoying my husband. I will never get tired of saying that.};
 	\smsTo, {Remus}, {My husband. Do you ever get used to that? \emoji{face-with-tears-of-joy}};
@@ -2342,7 +2339,7 @@ Although she has dabbled in fanfiction writing in the past, Engrams and Moonwalk
 
 \begin{center}
 {
-	\abnormalparskip{0em}\fancyqr[image=\includegraphics{AmethystHeart2421}, image padding=0, height=2.8in, l color=DarkPurple, r color=LightPurple, tight, version=7 ]{https://archiveofourown.org/works/39624996/comments/new}
+	\abnormalparskip{0em}\fancyqr[image=\includegraphics{AmethystHeart2421}, image padding=-.10, height=2.7in, r color=DarkPurple, l color=LightPurple, tight, version=7 ]{https://archiveofourown.org/works/39624996/comments/new}
 }
 \end{center}
 
