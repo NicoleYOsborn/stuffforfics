@@ -1,16 +1,14 @@
 \documentclass[12pt,twoside,openright]{memoir}
 
-\usepackage[paperwidth=6in, paperheight=9in, margin=1in, showcrop]{geometry}
+\usepackage[paperwidth=148.5mm, paperheight=210mm, inner=25mm, outer=15mm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{color}
-\usepackage{fontspec}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{emoji}
 \usepackage{tcolorbox}
 \usepackage{listofitems}
 \usepackage{fancyqr}
-
 
 \graphicspath{ {./} }
 \hypersetup{colorlinks=true, linkcolor=black, citecolor=black, filecolor=black, urlcolor=black}
@@ -19,8 +17,10 @@
 
 \author{AmethystHeart2421}
 \date{15 August 2022}
-\setstocksize{9in}{6in}
-\title{\textbf{\fontspec{Quantico}Engrams }\small\textbf{\fontspec{Open Sans} and } \huge\textbf{\fontspec{Moon Dance} Moonwalks}}
+\setstocksize{210mm}{148.5mm}
+\title{\textbf{\fontspec{Quantico}Engrams }\textbf{\small\fontspec{Open Sans} and } \textbf{\fontsize{1.5em}{1.8em}\selectfont\fontspec{Moon Dance}Moonwalks}}
+\pretitle{\begin{center}\HUGE\bfseries}
+\posttitle{\end{center}}
 
 % SMS Colors
 \definecolor{SMSFrom}{RGB}{18, 137, 254}
@@ -29,8 +29,8 @@
 \definecolor{onSMSTo}{RGB}{21, 20, 26}
 \definecolor{SMSTitleBack}{RGB}{246, 246, 246}
 \definecolor{SMSTitleText}{RGB}{0, 0, 0}
-\definecolor{DarkPurple}{RGB}{74,38,84}
-\definecolor{LightPurple}{RGB}{105,54,120}
+\definecolor{DarkPurple}{RGB}{74, 38, 84}
+\definecolor{LightPurple}{RGB}{105, 54, 120}
 
 \setmainfont{Open Sans}
 
@@ -40,6 +40,19 @@
 \newcommand\smsTo{2}
 
 \makeatletter
+\renewcommand{\maketitle}{%
+	\thispagestyle{empty}% Remove page number on the title page
+	\begin{center}
+		\Huge\bfseries \@title\par
+		\vskip 1.5em
+		\Large \@author\par
+		\vskip 1em
+		\large \@date\par
+	\end{center}
+	\clearpage
+	\@afterindentfalse\@afterheading% Reset indentation and heading
+}
+
 \newcommand{\tupleSwitch}[1]{
 	\setsepchar{;}
 	\readlist\mylist{#1}
@@ -82,7 +95,7 @@
 }
 
 \newcommand{\smsPic}[2]{
-	\hspace*{0.25\textwidth}\includegraphics[width=0.5\textwidth, alt=#2]{#1}
+	\hspace*{0.2\textwidth}\includegraphics[width=0.6\textwidth, alt=#2]{#1}
 }
 
 \newcommand{\smsFromBubble}[1] {
@@ -126,6 +139,7 @@
 
 \let\MyTitle\@title
 \let\MyAuthor\@author
+\let\MyDate\@date
 
 \fancyhf{}
 \fancyhead{} % clear all header fields
@@ -146,6 +160,7 @@
 
 \frontmatter
 
+\thispagestyle{empty}
 \maketitle
 
 \raggedright
@@ -1653,7 +1668,6 @@ Remus leaned over, kissing him chastely on the lips. ``You're important, too, th
 ``Do you want to talk about it?'' Remus asked, running a hand through Sirius's hair, smoothing it away from his face.
 
 ``No, don't really feel like talking.'' Sirius kissed him hungrily, hands desperate, pulling Remus on top of him, and there was very little talking for the rest of the night. 
-\myrulez
 
 \smsConversation{Padfoot}{
 	\smsFrom, {Padfoot}, {\smsPic{ivan-mani-bRv5vZcbAa4-unsplash}{}};
@@ -1661,18 +1675,19 @@ Remus leaned over, kissing him chastely on the lips. ``You're important, too, th
 	\smsTo, {Moony}, {Miss you already! \emoji{face-blowing-a-kiss}}
 }
 
-\textbf{(Two days later)}
-
+\pagebreak
+\textit{Two days later}
 \smsConversation{Padfoot}{
 	\smsFrom, {Padfoot}, {Mary's lunch. I hate her. \smsPic{peter-bravo-de-los-rios-OklpRh8-Sns-unsplash}{a slice of New York style pizza and a beer with parmesan cheese and red pepper flakes shakers}};
 	\smsFrom, {Padfoot}, {My lunch. This diet sucks. \smsPic{kelly-visel-zXn-amUiMJ4-unsplash}{a salad made mostly of leafy greens}}
 }
-\textbf{(A couple of hours later)} 
-
+\pagebreak
+\textit{A couple of hours later} 
 \smsConversation{Padfoot}{
 	\smsFrom, {Padfoot}, {I'm a proper tourist now. {\smsPic{xiaochuan-xu-0fMSLUYClVI-unsplash}{Someone taking a picture of the Statue of Liberty}}}
 }
-\textbf{(many hours later)}
+\pagebreak
+\textit{many hours later}
 
 \smsConversation{Padfoot}{
 	\smsTo, {Moony}, {Oh god that pizza looks good.};
