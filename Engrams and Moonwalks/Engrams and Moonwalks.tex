@@ -1,6 +1,6 @@
 \documentclass[12pt,twoside,openright]{memoir}
 
-\usepackage[paperwidth=148.5mm, paperheight=210mm, inner=25mm, outer=15mm]{geometry}
+\usepackage[paperwidth=7in, paperheight=8.5in, inner=25mm, outer=15mm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{color}
 \usepackage{hyperref}
@@ -17,7 +17,7 @@
 
 \author{AmethystHeart2421}
 \date{15 August 2022}
-\setstocksize{210mm}{148.5mm}
+\setstocksize{8.5in}{7in}
 \title{\textbf{\fontspec{Quantico}Engrams }\textbf{\small\fontspec{Open Sans} and } \textbf{\fontsize{1.5em}{1.8em}\selectfont\fontspec{Moon Dance}Moonwalks}}
 \pretitle{\begin{center}\HUGE\bfseries}
 \posttitle{\end{center}}
@@ -94,6 +94,16 @@
 	\end{center}
 }
 
+\newcommand{\nextmessage}{
+	{\node[anchor=east, yshift=-0.5em] at (frame.south east) {
+			\hfill
+			\includegraphics[height=0.8em]{dogprint.pdf}\hspace{.2em}
+			\includegraphics[height=0.6em]{dogprint.pdf}\hspace{.2em}
+			\includegraphics[height=0.4em]{dogprint.pdf}\hspace{.2em}
+		};
+	}
+}
+
 \newcommand{\smsPic}[2]{
 	\hspace*{0.2\textwidth}\includegraphics[width=0.6\textwidth, alt=#2]{#1}
 }
@@ -117,7 +127,17 @@
 }
 
 \newcommand{\smsConversation}[2]{
-	\begin{tcolorbox}[breakable, title=#1, center title,colframe=SMSTitleBack, coltitle=SMSTitleText, colback=white, fonttitle=\bfseries]
+	\begin{tcolorbox}[
+		breakable,
+		title=#1,
+		center title,
+		colframe=SMSTitleBack,
+		coltitle=SMSTitleText,
+		colback=white,
+		fonttitle=\bfseries,
+		overlay unbroken=\nextmessage,
+		overlay first and middle=\nextmessage
+		]
 		\tupleSwitch{#2}
 	\end{tcolorbox}
 	\vspace{2em}
@@ -157,7 +177,6 @@
 \setlength{\parskip}{0.5em}
 
 \begin{document}
-
 \frontmatter
 
 \thispagestyle{empty}
@@ -447,11 +466,11 @@ Sirius was scrolling through the list of dog walkers in the area, grimacing as h
 Sirius winked at his friend.. ``Sure, sure. I want this one!'' and he tapped the button to send a message.
 
 
-\includegraphics[width=\textwidth,height=\textheight]{profile}
+{\hfill\includegraphics[height=\textheight]{profile}\hfill}
 	
 
 \chapter*{Chapter 4}
-\textbf{4:30PM}\vspace{-1em}
+\textbf{4:30PM}\vspace{-1em}\nopagebreak
 \smsConversation{Bark to the Park}{
 	\smsFrom, {Bark to the Park}, {You have a message from Bark to the Park user, Padfoot12.};
 	\smsFrom, {Bark to the Park}, {Type Yes to accept the message};
@@ -476,8 +495,8 @@ Sirius winked at his friend.. ``Sure, sure. I want this one!'' and he tapped the
 	\smsFrom, {Padfoot12}, {It's short for Bartemius actually. It's a stupid name for a dog. My weird brother named him.};
 	\smsFrom, {Padfoot12}, {Padfoot is a perfectly normal name for a human, Moony. (*\string^{\fontspec{Times New Roman}\symbol{"203F}}\string^*)}
 }
-\pagebreak
-\textbf{8:00PM}\vspace{-1em}
+
+\textbf{8:00PM}\vspace{-1em}\nopagebreak
 \smsConversation{Padfoot}{
 	\smsTo, {Moony}, {Hi, I am at the gate at Godric's Hollow and I realize now I should have asked for more information. There is no button here labeled ``Padfoot'' or ``Bartemius''};
 	\smsFrom, {Padfoot}, {Oh, shit, right. Sorry, Moony --- Just give me a minute. I'll send someone out with him.};
@@ -487,7 +506,7 @@ Sirius winked at his friend.. ``Sure, sure. I want this one!'' and he tapped the
 	\smsTo, {Moony}, {\smsPic{taylor-heery-tOsfvWC\_fFo-unsplash (1)}{}};
 	\smsTo, {Moony}, {As much as I like my new name, you are entitled to know my actual name now that I have your dog in my possession and everything. If you are interested.}
 }
-\textbf{8:10PM}\vspace{-1em}
+\textbf{8:10PM}\vspace{-1em}\nopagebreak
 \smsConversation{Padfoot}{
 	\smsFrom, {Padfoot}, {I would love to know your name, Moony.};
 	\smsFrom, {Padfoot}, {I also want to know where you got the socks. Those are amazing.};
@@ -498,9 +517,9 @@ Sirius winked at his friend.. ``Sure, sure. I want this one!'' and he tapped the
 	\smsFrom, {Padfoot}, {BTW, I noticed that the app has a feature that can notify owners of every time their dog takes a shit or piss. I expect to be notified of all of Barty's bodily excretions.}	
 }
 
-\includegraphics[width=\textwidth]{iPhone 13 Pro Max - 3}\vspace{3em}
+{\hfill\includegraphics[height=\textheight]{iPhone 13 Pro Max - 3}\hfill}
 
-\textbf{8:50PM}\vspace{-1em}
+\textbf{8:50PM}\vspace{-1em}\nopagebreak
 \smsConversation{Padfoot}{
 	\smsFrom, {Padfoot}, {That's a lot of bodily excretions.};
 	\smsTo, {Moony}, {It's dark out. It's hard to tell if anything is actually coming out, so I figured I'd just let you know every time he lifts his leg by a bush or a rock or a mailbox, etc, etc. It could be important information for a dedicated pet owner such as yourself.};
@@ -530,7 +549,7 @@ Sirius winked at his friend.. ``Sure, sure. I want this one!'' and he tapped the
 
 \bigskip
 
-{\includegraphics[width=\textwidth]{Review RegularFont}}
+{\hfill\includegraphics[height=\textheight]{Review RegularFont}\hfill}
  
 
 \textit{Review text: MoonWalker06 is a miracle worker! Before he came into our lives, poor Barty was despondent and angry, taking out his frustration on any piece of furniture he could get his fangs on. He barked and howled all night long cooped up in a measly 12 bedroom mansion with only Persian rugs to piss on. But now all that has changed. One evening of frolicking beneath the stars and howling at the moon with MoonWalker06, and he is a new dog. He was able to piss himself dry on bushes, and rocks, and mailboxes as nature intended and sleep peacefully, dreaming of their next adventure. Thanks, Moony, you are my hero! }
@@ -539,7 +558,7 @@ Sirius winked at his friend.. ``Sure, sure. I want this one!'' and he tapped the
 
 ``Oh yeah, it's a good review. He's also uploaded a profile picture. Lily, you have to see this.'' He passed the phone back to her.
 
-{\includegraphics[width=\textwidth]{photo overlay}}
+{\hfill\includegraphics[height=\textheight]{photo overlay}\hfill}
 
 ``Oh Remus, he's gorgeous! And that review! He is definitely flirting with you.'' She was looking at the picture carefully, suddenly looking thoughtful. ``I'm pretty sure I've seen him before. Wait a minute!'' She set down the phone and started rustling around in her messenger bag, pulling out a magazine and flipping through the pages. ``Ah ha, isn't this him?''
 
@@ -1677,19 +1696,18 @@ Remus leaned over, kissing him chastely on the lips. ``You're important, too, th
 	\smsTo, {Moony}, {Miss you already! \emoji{face-blowing-a-kiss}}
 }
 
-\pagebreak
-\textit{Two days later}
+\textit{Two days later}\nopagebreak
 \smsConversation{Padfoot}{
 	\smsFrom, {Padfoot}, {Mary's lunch. I hate her. \smsPic{peter-bravo-de-los-rios-OklpRh8-Sns-unsplash}{a slice of New York style pizza and a beer with parmesan cheese and red pepper flakes shakers}};
 	\smsFrom, {Padfoot}, {My lunch. This diet sucks. \smsPic{kelly-visel-zXn-amUiMJ4-unsplash}{a salad made mostly of leafy greens}}
 }
-\pagebreak
-\textit{A couple of hours later} 
+
+\textit{A couple of hours later}\nopagebreak
 \smsConversation{Padfoot}{
 	\smsFrom, {Padfoot}, {I'm a proper tourist now. {\smsPic{xiaochuan-xu-0fMSLUYClVI-unsplash}{Someone taking a picture of the Statue of Liberty}}}
 }
-\pagebreak
-\textit{many hours later}
+
+\textit{many hours later}\nopagebreak
 
 \smsConversation{Padfoot}{
 	\smsTo, {Moony}, {Oh god that pizza looks good.};
