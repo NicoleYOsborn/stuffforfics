@@ -22,6 +22,7 @@
 \pretitle{\begin{center}\HUGE\bfseries}
 \posttitle{\end{center}}
 
+
 % SMS Colors
 \definecolor{SMSFrom}{RGB}{18, 137, 254}
 \definecolor{onSMSFrom}{RGB}{255, 255, 255}
@@ -111,23 +112,40 @@
 \newcommand{\smsPic}[2]{
 	\hspace*{0.2\textwidth}\includegraphics[width=0.6\textwidth, alt=#2]{#1}
 }
+\newlength{\myboxdifference}
+\newlength{\smsboxwidth} %this seems wrong...
 
 \newcommand{\smsFromBubble}[1] {
-\parbox{0.20\textwidth}{\hfill}
-\parbox{0.80\textwidth}{
-			\begin{tcolorbox}[halign=left, colframe=SMSFrom, colback=SMSFrom]
-				\raggedright\textcolor{onSMSFrom}{#1}
-			\end{tcolorbox}
-		}
+	
+	\settowidth{\smsboxwidth}{#1}
+	\ifdim\smsboxwidth>0.8\textwidth
+		\setlength{\smsboxwidth}{0.8\textwidth}%
+	\else
+		\addtolength{\smsboxwidth}{3.4em}
+	\fi
+
+	\setlength{\myboxdifference}{\dimexpr\smsboxwidth-\textwidth\relax}
+	
+	\begin{flushright}
+		\begin{tcolorbox}[halign=left, colframe=SMSFrom, colback=SMSFrom, width=\smsboxwidth]
+			\raggedright\textcolor{onSMSFrom}{#1}
+		\end{tcolorbox}
+	\end{flushright}
 }
 
-\newcommand{\smsToBubble}[1] {	
-	\parbox{0.8\textwidth}{
-		\begin{tcolorbox}[halign=left, colframe=SMSTo, colback=SMSTo]
+\newcommand{\smsToBubble}[1] {
+	
+	\settowidth{\smsboxwidth}{#1}
+	\ifdim\smsboxwidth>0.8\textwidth
+		\setlength{\smsboxwidth}{0.8\textwidth}
+	\else
+		\addtolength{\smsboxwidth}{3.4em}
+	\fi	
+	\parbox{\smsboxwidth}{
+	\begin{tcolorbox}[halign=left, colframe=SMSTo, colback=SMSTo, width=\smsboxwidth]
 			\raggedright\textcolor{onSMSTo}{#1}
-		\end{tcolorbox}
-	}
-	\parbox{0.2\textwidth}{\hfill}
+	\end{tcolorbox}
+}
 }
 
 \newcommand{\smsConversation}[2]{
