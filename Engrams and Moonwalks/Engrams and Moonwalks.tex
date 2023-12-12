@@ -54,6 +54,11 @@
 	\@afterindentfalse\@afterheading% Reset indentation and heading
 }
 
+\newcommand*\cleartoleftpage{%
+	\clearpage
+	\ifodd\value{page}\hbox{}\newpage\fi
+}
+
 \newcommand{\tupleSwitch}[1]{
 	\setsepchar{;}
 	\readlist\mylist{#1}
@@ -180,6 +185,15 @@
 \let\MyAuthor\@author
 \let\MyDate\@date
 
+%Redefine plain 
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+	\fancyfoot{} % clear all footer fields
+	\fancyhead{} % clear all header fields
+	\renewcommand{\headrulewidth}{0.0pt}%
+	\renewcommand{\footrulewidth}{0.0pt}
+}
+
 \fancyhf{}
 \fancyhead{} % clear all header fields
 \fancyhead[RO]{\textbf{\MyTitle}}
@@ -247,8 +261,9 @@ Remus is a grad student studying to be a school psychologist. His mother is ill 
 \vspace*{\fill}
 \mainmatter
 \raggedbottomsection
-\chapter*{Chapter 1}
+
 \pagestyle{fancy}
+\chapter*{Chapter 1}
 \textbf{Remus} 
 
 ``Are you getting enough to eat? You're so skinny! Do they even feed you at that school of yours?'' 
@@ -1567,11 +1582,6 @@ Remus, who's eyes hadn't left Sirius's face, came up to him now, putting an arm 
 
 Remus gave a small smile and spoke in his ear, ``I'd really love to get out of here. But I think I need to hang around until most of the guests leave. Will you stay with me?'' Sirius's jealousy of only moments before melted away instantly. In this room filled with people who had known him and cared about him for years, it was Sirius that Remus wanted. It was Sirius that he needed. And Sirius thought his chest would burst open with love for Remus. ``Of course.'' he answered, kissing Remus on the cheek and taking his hand.\ \textit{I would do anything for you, Remus Lupin.}
 
-Chapter End Notes
-
-All of my favorite stories have Sirius feeling everything a bit too strongly, so I can definitely see that coming through here. Poor puppy! I love him so much. 
-
-I think it's time for a nice fluffy chapter next. These boys deserve a summer of love. LOL So stay tuned!
 \chapter*{Chapter 14}
 
 \textbf{Remus} 
@@ -1897,9 +1907,6 @@ Sirius laughed and kissed him. ``I love you, too, Remus Lupin. I hope you know w
 
 ``Okay, good, because I have a lot to tell you.'' And he told Remus everything. About his childhood, his parents, his brother. And he told him about meeting Pandora at the fashion show, and what she said about Regulus. And how frightened he was. And Remus held him and promised to help. Whatever happened, they would get through it. Together.
 
-Chapter End Notes
-
-This one was tough to write. I'm just glad Sirius is finally ready to get help (from an actual psychiatrist because love alone won't fix him, that's a dangerous trope and not gonna happen on my watch!!)
 \chapter*{Chapter 17}
 
 \textbf{Regulus} 
@@ -2071,7 +2078,7 @@ When they got back to the mansion they were chatting about whether they should k
 
 The group all filed into the living room, settling themselves on sofas and chairs. Sirius headed for the stairs and called for Barty. The little dog came bounding down the stairs and Sirius picked him up. When Regulus saw him and said his name, the dog went nuts, twisting out of Sirius's arm and making a bee-line for his owner, who cooed and laughed and picked Barty up cuddling him in his arms. It was like one of those heartwarming videos of soldiers reuniting with their dogs, and there wasn't a dry eye in the house.
 
-The next surprise was a buzz from theGodric's Hollow guard station. The room filled with tension, as though they all suddenly remembered that they should still expect consequences after their well-executed escape. But when James answered the call, they heard that it was Pandora waiting at the neighborhood entrance gates. She had left the church with Xenophilius as soon as she heard that Regulus was safe. James told the guard to allow them in, and soon the couple joined the rest of the group in the living room. They were introduced to the group, and Pandora complimented them profusely on their costumes. She hugged Regulus and explained that she didn't intend to ever return to the church either.
+The next surprise was a buzz from the Godric's Hollow guard station. The room filled with tension, as though they all suddenly remembered that they should still expect consequences after their well-executed escape. But when James answered the call, they heard that it was Pandora waiting at the neighborhood entrance gates. She had left the church with Xenophilius as soon as she heard that Regulus was safe. James told the guard to allow them in, and soon the couple joined the rest of the group in the living room. They were introduced to the group, and Pandora complimented them profusely on their costumes. She hugged Regulus and explained that she didn't intend to ever return to the church either.
 
 Regulus looked shocked at that revelation. ``So you just blew? You could have routed out!''
 
@@ -2394,19 +2401,23 @@ Remus watched his husband as he laughed to himself while texting with his brothe
 
 \vspace*{\fill}
 \begin{center}
-	\HUGE
-	\includegraphics[height=0.4em, angle=180, origin=c]{dogprint.pdf}\hspace{.2em}
+	\Large
 	\includegraphics[height=0.6em, angle=180, origin=c]{dogprint.pdf}\hspace{.2em}
 	\includegraphics[height=0.8em, angle=180, origin=c]{dogprint.pdf}\hspace{.2em}
-	\fontspec{Moon Dance}\textbf{The End}\hspace{.2em}
+	\includegraphics[height=1em, angle=180, origin=c]{dogprint.pdf}\hspace{.2em}
+	\fontspec{Moon Dance}\fontsize{1.6em}{1.2em}\textbf{The End}\hspace{.2em}
+	\includegraphics[height=1em]{dogprint.pdf}\hspace{.2em}
 	\includegraphics[height=0.8em]{dogprint.pdf}\hspace{.2em}
 	\includegraphics[height=0.6em]{dogprint.pdf}\hspace{.2em}
-	\includegraphics[height=0.4em]{dogprint.pdf}
 \end{center}
 
-\backmatter
 
+\backmatter
+\cleardoublepage
+\openleft
+\pagestyle{plain}
 \chapter*{About the author}
+
 Nicole Osborn was born and raised in Arizona, where she currently lives with her husband, James, her daughter, Zelda, and their two cats, Molly and Kirjava. Kirjava may have contributed to this novel by jumping on the keyboard a few times.
 
 Although she has dabbled in fanfiction writing in the past, Engrams and Moonwalks is Nicole’s first multi-chapter fanfiction. She has gone on to write more multi-chaptered fics and several one-shots. All of her works can be found on Archive of Our Own under the pen-name AmethystHeart2421.
@@ -2416,7 +2427,7 @@ Although she has dabbled in fanfiction writing in the past, Engrams and Moonwalk
 Leave a comment \url{https://archiveofourown.org/works/39624996/comments/new}
 \begin{center}
 {
-	\abnormalparskip{0em}\fancyqr[image=\includegraphics{AmethystHeart2421}, image padding=-.15, height=4in, r color=DarkPurple, l color=red, tight, version=7 ]{https://archiveofourown.org/works/39624996/comments/new}
+	\abnormalparskip{0em}\fancyqr[image=\includegraphics{AmethystHeart2421}, image padding=-.15, height=5in, r color=DarkPurple, l color=red, tight, version=7 ]{https://archiveofourown.org/works/39624996/comments/new}
 }
 \end{center}
 
