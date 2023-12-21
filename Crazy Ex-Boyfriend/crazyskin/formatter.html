@@ -1,0 +1,541 @@
+<!-- paste into https://www.w3schools.com/code/tryit.asp?filename=GHIU0AL4AXWX to use -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+        input[type=text],
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 4px;
+
+            resize: vertical;
+
+        }
+
+        label {
+
+            padding: 12px 12px 12px 0;
+
+            display: inline-block;
+
+        }
+
+        input[type=submit] {
+
+            background-color: #4CAF50;
+
+            color: white;
+
+            padding: 12px 20px;
+
+            border: none;
+
+            border-radius: 4px;
+
+            cursor: pointer;
+
+            float: right;
+
+        }
+
+        input[type=submit]:hover {
+
+            background-color: #45a049;
+
+        }
+
+        .container {
+
+            border-radius: 5px;
+
+            background-color: #f2f2f2;
+
+            padding: 20px;
+
+        }
+
+        .col-75 {
+
+            float: left;
+
+            width: 100%;
+
+            margin-top: 6px;
+
+        }
+
+        /* Clear floats after the columns */
+
+        .row:after {
+
+            content: "";
+
+            display: table;
+
+            clear: both;
+
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+        @media screen and (max-width: 600px) {
+
+            col-75,
+            input[type=submit] {
+
+                width: 100%;
+
+                margin-top: 0;
+
+            }
+
+
+
+            /*aesthetics*/
+
+
+
+        }
+
+        .header {
+
+            background-color: #f1f1f1;
+
+            text-align: left;
+
+            line-height: 20px;
+
+            font-size: 24px;
+
+            font-weight: normal;
+
+            font-family: "Courier New", courier, monospace;
+
+            padding: 25px;
+
+        }
+
+        .column {
+
+            float: left;
+
+            padding: 15px;
+
+        }
+
+        .clearfix::after {
+
+            content: "";
+
+            clear: both;
+
+            display: table;
+
+        }
+
+        .menu {
+
+            width: 25%;
+
+        }
+
+        .content {
+
+            width: 75%;
+
+            font-family: Verdana, Helvetica, sans-serif;
+
+        }
+
+        .menu ul {
+
+            list-style-type: none;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        .button {
+
+            padding: 8px;
+
+            margin-bottom: 8px;
+
+            background-color: SteelBlue;
+
+            color: #ffffff;
+
+            width: 100%;
+
+            font-family: "Courier New", courier, monospace;
+
+            font-weight: bold;
+
+        }
+
+        .button:hover {
+
+            background-color: lightSteelBlue;
+
+            color: white;
+
+
+
+            /*content*/
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h3><u>SCREENPLAY SKIN - SPEED EDITOR</u></h3>
+
+        <p> For use with the ao3 WORK SKIN created by ASTRONOUGHT.</p>
+
+    </div>
+
+    <div class="clearfix">
+
+
+
+        <!-- classification menu -->
+
+        <div class="column menu">
+
+            <ul>
+
+                <li><button class=button
+                        onclick="slugFunction()">Slug</button></li>
+
+                <li><button class=button
+                        onclick="actFunction()">Action</button></li>
+
+                <li><button class=button
+                        onclick="charFunction()">Character</button></li>
+
+                <li><button class=button
+                        onclick="dlogFunction()">Dialogue</button></li>
+
+                <li><button class=button
+                        onclick="subFunction()">Subheading</button></li>
+
+                <li><button class=button
+                        onclick="trnsFunction()">Transition</button></li>
+
+                <li><button class=button
+                        onclick="parFunction()">Parenthetical (Before Dialogue) </button></li>
+
+                <li><button class=button
+                        onclick="midparFunction()">Parenthetical (Mid-Dialogue)</button></li>
+
+                <li><button class=button
+                        onclick="fadeinFunction()">Fade In</button></li>
+
+                <li><button class=button
+                        onclick="cuttoblackFunction()">Cut To Black</button></li>
+
+            </ul>
+
+        </div>
+
+        <div class="column content">
+
+
+
+            <!-- engine -->
+
+            <div class="container">
+
+                <form action="/action_page.php">
+
+                    <div class="row">
+
+                        <div class="col-25">
+
+                            <label for="subject">HOW TO USE:<p>Enter your unformatted text into the topmost text field (below). Select the correct classification from the menu on the left to show a preview of the formatted text, then click "add to script" to finish the line. When you're done, simply copy and paste the generated text into your work text. Run the code again to clear your script.</p></label>
+
+                        </div>
+
+                        <div class="col-75">
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+
+
+                <!--input code-->
+
+                <!--text fields-->
+
+                <input type="text"
+                    id="text"
+                    onKeyUp="my()"
+                    placeholder="Enter text here! ex: 'Harry yeets his AIRPODS across the room'"><br><br>
+
+                <span id="demo_span">
+
+
+
+                    <input type="text"
+                        id="demo"
+                        placeholder="Formatted line will appear here after classified! ex: '<p class=&quot;act&quot;> Harry yeets his AIRPODS across the room.</p>">
+
+                </span>
+
+                <p></p>
+
+            </div>
+
+
+
+            <!--classification input code-->
+
+            <div id="container">
+
+                <button onclick="listen()"
+                    id="button">Add to script</button>
+
+            </div>
+
+            <p id="slug"></p>
+
+            <p id="act"></p>
+
+            <p id="char"></p>
+
+            <p id="dlog"></p>
+
+            <p id="sub"></p>
+
+            <p id="trns"></p>
+
+            <p id="par"></p>
+
+            <p id="midpar"></p>
+
+            <p id="fadein"></p>
+
+            <p id="cuttoblack"></p>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+    <script>
+
+        function slugFunction() {
+
+            document.getElementById("slug");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"\slug\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+        function actFunction() {
+
+            document.getElementById("act");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"\act\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+        function charFunction() {
+
+            document.getElementById("char");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"\char\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+
+
+        function dlogFunction() {
+
+            document.getElementById("dlog");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"\dlog\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+
+
+        function subFunction() {
+
+            document.getElementById("sub");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"\sub\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+
+
+        function trnsFunction() {
+
+            document.getElementById("dlog");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"trns\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+
+
+        function parFunction() {
+
+            document.getElementById("par");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"\par\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+
+
+        function midparFunction() {
+
+            document.getElementById("midpar");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"\midpar\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+
+
+        function fadeinFunction() {
+
+            document.getElementById("fadein");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"fadein\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+
+
+        function cuttoblackFunction() {
+
+            document.getElementById("cuttoblack");
+
+            var a = document.getElementById("text").value;
+
+            var b = "<p class=\"\cuttoblack\"\>"
+
+            var c = "</p>"
+
+            document.getElementById("demo").value = b + a + c;
+
+        }
+
+
+
+        function final() {
+
+            var x = document.getElementById("demo").value;
+
+            document.getElementById("addToScript").innerText = x;
+
+        }
+
+
+
+        const listen = event => {
+
+            const p = document.createElement('p');
+
+            var x = document.getElementById("demo").value;
+
+            p.innerText = x;
+
+            document.querySelector('#container').appendChild(p);
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
