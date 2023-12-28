@@ -1,0 +1,137 @@
+#workskin CSS Website Layout * {
+box-sizing: border-box;
+background-color: OldLace;
+}
+
+#workskin p.act {
+font-weight: normal;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+margin: 10px 6.66% 10px 10%;
+max-width: 700px;
+background-color: white;
+}
+
+#workskin p.slug {
+font-weight: normal;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+text-transform: uppercase;
+text-decoration: underline;
+margin: 0px 6.66% 25px 10%;
+background-color: white;
+max-width: 700px;
+}
+
+#workskin p.sub {
+font-weight: normal;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+text-transform: uppercase;
+margin: 0px 6.66% 25px 10%;
+background-color: white;
+max-width: 700px;
+}
+
+#workskin p.char {
+font-weight: normal;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+text-align: center;
+text-transform: uppercase;
+margin: 35px 26.25% 5px 35%;
+max-width: 700px;
+background-color: white;
+}
+
+#workskin .dlog {
+text-align: left;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+margin: 5px 20% 40px 30%;
+max-width: 400px;
+background-color: white;
+}
+
+#workskin p.trns {
+text-align: right;
+font-weight: bold;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+text-transform: uppercase;
+margin: 10px 6.66% 10px 10%;
+max-width: 700px;
+background-color: white;
+}
+
+#workskin p.fadein {
+font-weight: bold;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+text-transform: uppercase;
+margin: 10px 6.66% 0px 10%;
+background-color: white;
+}
+
+#workskin p.cuttoblack {
+text-align: right;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+text-transform: uppercase;
+margin: 10px 6.66% 10px 10%;
+max-width: 700px;
+background-color: white;
+}
+
+#workskin p.par {
+text-indent: 7.5%;
+text-align: left;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+margin: 5px 20% 0px 30%;
+max-width: 400px;
+background-color: white;
+}
+
+#workskin p.midpar {
+text-indent: 7.5%;
+text-align: left;
+font-family: "Courier New", courier, monospace;
+font-size: 18px;
+margin: -30px 20% 0px 30%;
+max-width: 400px;
+background-color: white;
+}
+
+#workskin body {
+margin: 0;
+}
+
+#workskin .column {
+float: center;
+padding: 20px 10px 20px 10px;
+}
+
+#workskin .column.side {
+width: 27.5%;
+padding: 0 10% 0 10%;
+}
+
+#workskin .column.middle {
+width: 45%;
+max-width: 800px;
+border: 1px solid LightGray;
+background-color: white;
+padding: 0 5% 0 5%;
+}
+
+#workskin .row:after {
+content: " ";
+display: table;
+clear: both;
+}
+
+#workskin .column.side,
+#workskin .column.middle {
+width: 100%;
+}
