@@ -301,3 +301,7 @@ TSWLatexianTemp*
 #*Notes.bib
 
 *.ini
+
+*.tmp
+
+*.kate-swp
