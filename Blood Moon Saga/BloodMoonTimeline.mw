@@ -1,0 +1,69 @@
+title: Lunacy!
+
+#scene: blue
+#fullMoon: gray
+#bloodMoon: red
+#book1: green
+
+group FullMoons79 #fullMoon
+01/13/1979: Full Moon #fullMoon
+02/12/1979: Full Moon #fullMoon
+03/13/1979: Full Moon #fullMoon
+04/12/1979: Full Moon #fullMoon
+05/12/1979: Full Moon #fullMoon
+06/10/1979: Full Moon #fullMoon
+07/09/1979: Full Moon #fullMoon
+08/08/1979: Full Moon #fullMoon
+09/06/1979: Full Moon #fullMoon
+10/05/1979: Full Moon #fullMoon
+11/04/1979: Full Moon #fullMoon
+12/03/1979: Full Moon #fullMoon
+endGroup
+group Heathens #book1
+06/11/1979: You and Me, Moonny #scene 
+endGroup
+group FullMoons80 #fullMoon
+01/02/1980: Full Moon #fullMoon
+02/01/1980: Full Moon #fullMoon
+03/01/1980: Full Moon #fullMoon
+03/31/1980: Full Moon #fullMoon
+04/30/1980: Full Moon #fullMoon
+05/29/1980: Full Moon #fullMoon
+06/28/1980: Full Moon #fullMoon
+07/27/1980: Full Moon #fullMoon
+08/26/1980: Full Moon #fullMoon
+09/24/1980: Full Moon #fullMoon
+10/23/1980: Full Moon #fullMoon
+11/22/1980: Full Moon #fullMoon
+12/21/1980: Full Moon #fullMoon
+endGroup
+group FullMoons81 #fullMoon
+01/20/1981: Full Moon #fullMoon
+02/18/1981: Full Moon #fullMoon
+03/20/1981: Full Moon #fullMoon
+04/19/1981: Full Moon #fullMoon
+05/19/1981: Full Moon #fullMoon
+06/17/1981: Full Moon #fullMoon
+07/17/1981: Full Moon #fullMoon
+08/15/1981: Full Moon #fullMoon
+09/14/1981: Full Moon #fullMoon
+10/13/1981: Full Moon #fullMoon
+11/11/1981: Full Moon #fullMoon
+12/11/1981: Full Moon #fullMoon
+endGroup
+group FullMoons82 #fullMoon
+01/09/1982: Full Moon #bloodMoon #fullMoon
+02/08/1982: Full Moon #fullMoon
+03/09/1982: Full Moon #fullMoon
+04/08/1982: Full Moon #fullMoon
+05/08/1982: Full Moon #fullMoon
+06/06/1982: Full Moon #fullMoon
+07/06/1982: Full Moon #fullMoon
+08/04/1982: Full Moon #fullMoon
+09/03/1982: Full Moon #fullMoon
+10/03/1982: Full Moon #fullMoon
+11/01/1982: Full Moon #fullMoon
+12/01/1982: Full Moon #fullMoon
+12/30/1982: Full Moon #fullMoon
+endGroup
+
