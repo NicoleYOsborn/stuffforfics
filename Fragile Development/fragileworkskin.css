@@ -394,3 +394,105 @@
 #workskin .message-text {
     color: #2c2d30;
 }
+
+#workskin .bankappbody {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+#workskin .app-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+#workskin .bankappheader {
+  background-color: #c79a1e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+#workskin .bankappheader h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#workskin .balance-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#workskin .balance-section h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #666;
+}
+
+#workskin .balance {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #c79a1e;
+}
+
+/* Article */
+#workskin .article {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+        }
+#workskin .articlecontainer {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+#workskin .articleheader {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+            border-radius: 10px;
+        }
+#workskin .articleheader h1 {
+            margin: 0;
+            font-size: 36px;
+            font-family: 'Courier New', serif;
+            color: #549156;
+        }
+#workskin .articleheader .tagline {
+            margin-top: 10px;
+            font-size: 18px;
+            font-style: italic;
+            color: #ddd;
+        }
+#workskin .article-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+#workskin .article-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+#workskin .article-content {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+#workskin .article-content p {
+            margin-bottom: 20px;
+        }
