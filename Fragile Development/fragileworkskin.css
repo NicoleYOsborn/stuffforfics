@@ -1,0 +1,396 @@
+/* text messages */
+#workskin .hide {
+  display: none;
+}
+
+#workskin .image1 {
+  float: right;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  width: 50%;
+  min-height: 75%;
+  clear: both;
+  position: relative;
+  background-image: url("https://i.imgur.com/Nlbyr00.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  padding-bottom: 25%;
+}
+
+#workskin .phone {
+  max-width: 300px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: table;
+  margin: auto;
+}
+
+#workskin .header {
+  min-width: 300px;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #b2b2b2;
+  color: #000000;
+  font-weight: bold;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -2em;
+  text-align: center;
+  text-transform: capitalize;
+  display: table;
+}
+
+#workskin .body {
+  background-color: #FFFFFF;
+  display: table;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+#workskin .bodyNoHeader {
+  width: 300px;
+  display: table;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+#workskin .emojiRight {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+#workskin .emojiLeft {
+  float: left;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+#workskin .blueText {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #1289fe;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+#workskin .blueTextTail {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #1289fe;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+#workskin .blueTextTail::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #1289fe;
+  border-bottom-left-radius: 1em 0.5em;
+}
+
+#workskin .greenText {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #35cb24;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+#workskin .greenTextTail {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #35cb24;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+#workskin .greenTextTail::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #35cb24;
+  border-bottom-left-radius: 1em 0.5em;
+}
+
+#workskin .greyText {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #e5e5ea;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+#workskin .greyTextTail {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #e5e5ea;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+#workskin .greyTextTail::after {
+  content: "";
+  position: absolute;
+  left: -.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-right: 0.5em solid #e5e5ea;
+  border-bottom-right-radius: 1em 0.5em;
+}
+
+#workskin .time {
+  min-width: 295px;
+  color: #7B7C80;
+  font-size: .75em;
+  padding-bottom: .2em;
+  padding-top: .2em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -.5em;
+  text-align: center;
+  display: table;
+}
+
+#workskin .typing-indicator {
+  background-color: #e6e7ed;
+  width: auto;
+  border-radius: 1em;
+  padding: .5em 1em;
+  display: table;
+  margin: 0 0 .5em;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  clear: both;
+}
+
+#workskin .typing-indicator::before,
+#workskin .typing-indicator::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #e6e7ed;
+}
+
+#workskin .typing-indicator::after {
+  height: 6px;
+  width: 6px;
+  left: -6px;
+  bottom: -6px;
+}
+
+#workskin .typing-indicator span {
+  height: 15px;
+  width: 15px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+#workskin .typing-indicator span {
+  height: .65em;
+  width: .65em;
+  float: left;
+  margin: .425em 0 .425em .25em;
+  margin-left: 0.25em;
+  background-color: #9e9ea1;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: .5;
+}
+
+#workskin .typing-indicator span:first-child {
+  margin-left: 0;
+}
+
+#workskin .typing-indicator span:nth-child(1) {
+  opacity: .85;
+}
+
+#workskin .typing-indicator span:nth-child(2) {
+  opacity: .65;
+}
+
+#workskin .grouptext {
+  color: #7B7C80;
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: 0;
+  margin-left: .5em;
+  margin-bottom: -2.5em;
+  text-align: left;
+  display: table;
+  clear: both;
+}
+
+#workskin .readreceipt {
+  color: #7B7C80;
+  font-size: .75em;
+  float: right;
+  position: relative;
+  clear: both;
+  margin: -.75em -1.25em 0.5em 0;
+  padding: 0 1em 0.5em;
+}
+
+/* IRC chat */
+
+/* Container for the IRC chat look */
+#workskin .irc-container {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 1.4;
+  overflow: auto;
+  
+}
+
+
+#workskin td:nth-child(2) {
+  width: 20%;
+  text-align: right;
+  vertical-align: top;
+}
+#workskin td:nth-child(3) { 
+  padding-left: 8px;
+}
+
+#workskin .username-action {
+  font-weight: bold;
+  color: #569cd6;
+}
+
+/* Timestamp style */
+#workskin .irc-timestamp {
+  color: #7a7a7a;
+}
+
+/* Username style */
+#workskin .irc-username {
+  color: #569cd6;
+}
+
+/* Message text style */
+#workskin .irc-message {
+  color: #dcdcdc;
+}
+
+#workskin .wormtail {
+  color: #FFA500;
+}
+
+/* Styling different actions */
+#workskin .irc-action {
+  color: #6a9955;
+  font-style: italic;
+}
+
+/* Join/leave messages */
+#workskin .irc-join {
+  color: #4caf50;
+}
+
+#workskin .irc-leave {
+  color: #f44336;
+}
+
+/* Slack message */
+#workskin .slack-message {
+    font-family: "Lato", sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+#workskin .slack-message img {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#workskin .message-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#workskin .message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#workskin .user-name {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #2c2d30;
+}
+
+#workskin .slack-timestamp {
+    color: #616061;
+    font-size: 0.85em;
+}
+
+#workskin .message-text {
+    color: #2c2d30;
+}
